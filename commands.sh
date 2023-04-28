@@ -1,2 +1,2 @@
-cp -r ./index.html ./css ./js ./assets ../tsj7ww.github.io/
-cp -r ./public/* ../../tsj7ww.github.io/blog/
+cp -r ~/Documents/github/website/index.html ~/Documents/github/website/assets ~/Documents/github/tsj7ww.github.io/
+cp -r ~/Documents/github/website/blog/public/* ~/Documents/github/tsj7ww.github.io/blog/

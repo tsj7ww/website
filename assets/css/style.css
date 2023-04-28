@@ -1,0 +1,399 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #ffffff;
+  color: #898989;
+  font-family: "Poppins", helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  color: #292929;
+  font-weight: 600;
+}
+
+h4 {
+  color: #292929;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+a {
+  color: #dcdcdc;
+  text-decoration: none !important;
+  transition: all 0.5s ease-in-out 0s;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover {
+  transition: all 0.5s ease-in-out 0s;
+}
+
+p {
+  margin: 25px 0;
+  padding: 0;
+  font-size: 15px;
+  color: #999999;
+  line-height: 28px;
+}
+
+.btn {
+  background: #efffff;
+  border: medium none;
+  color: #000;
+  font-size: 12px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+  text-transform: uppercase;
+  border-radius: 15px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #c8c8c8;
+  background: #dad2e0;
+}
+
+.padDiv {
+  padding: 30px 20px;
+}
+
+.section-title {
+  margin-bottom: 70px;
+}
+
+.section-title h2 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-control {
+  background-color: transparent;
+  border: 1px solid #999;
+  border-radius: 0;
+  color: #999999;
+  font-size: 12px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: 0.1em;
+  padding-left: 10px;
+  margin: 0 0 25px 0;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.paddsection {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.paddsection-tight {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.paddsections {
+  padding-top: 90px;
+  padding-bottom: 90px !important;
+}
+
+.hvr-shutter-in-horizontal::before {
+  background: #333;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.main-content {
+  padding-top: 140px;
+}
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+#hero {
+  background: url("../img/rva.jpg") repeat scroll center center/cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero .hero-content {
+  height: 45vh;
+  text-align: center;
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8vh;
+}
+
+.hero-content h1 {
+  padding-top: 15px;
+  font-size: 40px;
+  font-weight: 625;
+  color: #000;
+}
+
+.hero-content p {
+  font-size: 17px;
+  letter-spacing: 0.75px;
+  margin-top: 0;
+  color: #000;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.hero-content .list-social i {
+  justify-content: center;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 5px;
+}
+.headshot {
+  border-radius: 15px;
+  height: 15vh;
+  width: 31%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Journal
+--------------------------------------------------------------*/
+#journal,
+#journal-blog {
+  height: auto;
+  width: 100%;
+  background: #ffffff;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+#journal-blog {
+  background: #fff;
+  padding-bottom: 30px;
+}
+
+#journal .journal-block {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+
+#journal .journal-block .journal-info {
+  position: relative;
+}
+
+.journal-block .journal-info img {
+  max-width: 100%;
+}
+
+.journal-block .journal-info .journal-txt {
+  padding: 25px 0px;
+  position: relative;
+}
+
+.journal-block .journal-info .journal-txt h4 a {
+  display: block;
+  font-size: 19px;
+  line-height: 24px;
+  margin: 0 0 13px 0;
+  color: #000;
+}
+
+.journal-block .journal-info .journal-txt p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+  height: auto;
+  width: 100%;
+  background-color: #4f385b;
+}
+
+.contact-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.contact-details li {
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  color: #000;
+  font-weight: bold;
+}
+
+#contact textarea {
+  min-height: 160px;
+}
+
+/** Width between 1200x to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+/** Width between 992px to 1199px
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+/** Width between 768px to 991px
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .responsive {
+    float: right;
+    padding-top: 15px;
+    display: block;
+  }
+
+  /* journal */
+  #journal .journal-block .journal-info {
+    margin-bottom: 30px;
+  }
+
+  /* Contact */
+  .contact-contact {
+    margin-bottom: 30px;
+  }
+}
+
+/** Width between 767px to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+@media (max-width: 767px) {
+
+  .responsive {
+    float: right;
+    padding-top: 15px;
+    display: block;
+  }
+
+  /* journal */
+  #journal .journal-block .journal-info {
+    margin-bottom: 30px;
+  }
+
+  /* Contact */
+  .contact-contact {
+    margin-bottom: 30px;
+  }
+}
+
+/** Width between 600px to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+@media (max-width: 600px) {
+
+  .responsive {
+    float: right;
+    padding-top: 15px;
+    display: block;
+  }
+
+  /* journal */
+  #journal .journal-block .journal-info {
+    margin-bottom: 30px;
+  }
+
+  /* Contact */
+  .contact-contact {
+    margin-bottom: 30px;
+  }
+}
+
+/** Width between 480px to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+@media (max-width: 480px) {
+
+  .responsive {
+    float: right;
+    padding-top: 15px;
+    display: block;
+  }
+
+  /* journal */
+  #journal .journal-block .journal-info {
+    margin-bottom: 30px;
+  }
+
+  /* Contact */
+  .contact-contact {
+    margin-bottom: 30px;
+  }
+}
+
+/** Width between 320px to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+@media (max-width: 320px) {
+
+  .responsive {
+    float: right;
+    padding-top: 15px;
+    display: block;
+  }
+
+  /* journal */
+  #journal .journal-block .journal-info {
+    margin-bottom: 30px;
+  }
+
+  /* Contact */
+  .contact-contact {
+    margin-bottom: 30px;
+  }
+
+  /* Single page */
+  .entry-comments-body span {
+    display: inline-block;
+    margin-right: 0;
+  }
+}
