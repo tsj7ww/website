@@ -1,0 +1,95 @@
+baseURL: "https://tsj7ww.github.io/blog/"
+title: Trevor Jordan's Blog
+paginate: 5
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+# googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    # minifyOutput: true
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: Blog
+                  url: /
+                  weight: 5
+                - name: Personal Website
+                  url: ../
+                  weight: 10
+                - name: LinkedIn
+                  url: https://linkedin.com/in/tsj7ww
+                  weight: 15
+                - name: GitHub
+                  url: https://github.com/tsj7ww/portfolio#readme
+                  weight: 20
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    description: "Trevor Jordan's Blog"
+    author: Trevor Jordan
+
+    defaultTheme: auto
+    # disableThemeToggle: true
+    # ShowShareButtons: true
+    # ShowReadingTime: true
+    # disableSpecial1stPost: true
+    # displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowToc: true
+    # comments: false
+    images: ["papermod-cover.png"]
+
+    profileMode:
+        enabled: false
+        title: Trevor Jordan's Blog
+        imageUrl: "#"
+        imageTitle: my image
+        # imageWidth: 120
+        # imageHeight: 120
+        buttons:
+            - name: Archives
+              url: archives
+            - name: Tags
+              url: tags
+
+    homeInfoParams:
+        Title: "Hello!"
+        Content: >
+            Welcome to my blog! This is where I post analysis on topics that interest me.
+
+    assets:
+        disableHLJS: true
+        favicon: "./assets/favicon.ico"
+
+    socialIcons:
+        - name: cv
+          url: "https://trevsjordan.wordpress.com"
+        - name: linkedin
+          url: "https://linkedin.com/in/tsj7ww"
+        - name: github
+          url: "https://github.com/tsj7ww/portfolio#readme"
