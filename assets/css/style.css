@@ -56,20 +56,20 @@ p {
 }
 
 .btn {
-  background: #efffff;
+  background: #ffffff;
   border: medium none;
   color: #000;
-  font-size: 12px;
+  font-size: 13px;
   height: 50px;
   line-height: 50px;
   padding: 0 30px;
-  text-transform: uppercase;
-  border-radius: 15px;
+  /* text-transform: uppercase; */
+  border-radius: 10px;
 }
 
 .btn:hover,
 .btn:focus {
-  color: #c8c8c8;
+  color: #ffffff;
   background: #dad2e0;
 }
 
@@ -148,20 +148,20 @@ p {
 #hero .hero-content {
   height: 45vh;
   text-align: center;
-  width: 32%;
+  width: 50vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 8vh;
+  padding-top: 7vh;
 }
 
 .hero-content h1 {
-  padding-top: 15px;
+  padding-top: 13px;
   font-size: 40px;
   font-weight: 625;
   color: #000;
@@ -183,9 +183,9 @@ p {
   letter-spacing: 5px;
 }
 .headshot {
-  border-radius: 15px;
+  border-radius: 10px;
   height: 15vh;
-  width: 31%;
+  width: 16vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
