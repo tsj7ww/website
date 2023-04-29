@@ -2,12 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tsj7ww.github.io/blog/posts/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tsj7ww.github.io/blog/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tsj7ww.github.io/blog/posts/20151201-early-education/</loc>
+    <lastmod>2015-12-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tsj7ww.github.io/blog/categories/</loc>
   </url><url>
     <loc>https://tsj7ww.github.io/blog/series/</loc>
   </url><url>
     <loc>https://tsj7ww.github.io/blog/tags/</loc>
-  </url><url>
-    <loc>https://tsj7ww.github.io/blog/</loc>
   </url>
 </urlset>

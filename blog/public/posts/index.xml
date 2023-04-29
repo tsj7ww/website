@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Trevor Jordan&#39;s Blog</title>
+    <link>https://tsj7ww.github.io/blog/posts/</link>
+    <description>Recent content in Posts on Trevor Jordan&#39;s Blog</description>
+    <image>
+      <title>Trevor Jordan&#39;s Blog</title>
+      <url>https://tsj7ww.github.io/blog/papermod-cover.png</url>
+      <link>https://tsj7ww.github.io/blog/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Dec 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://tsj7ww.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>US K-12 Public Education</title>
+      <link>https://tsj7ww.github.io/blog/posts/20151201-early-education/</link>
+      <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://tsj7ww.github.io/blog/posts/20151201-early-education/</guid>
+      <description>What does the average person think about the United States education system? In general, I think most Americans would believe that they are very competitive when it comes to education. Of the top 10 best universities in the world, 8 can be found in the United States. These statistics, however, unjustly display the underlying issue plaguing the US education system that over time is making Americans less competitive in a growing global economy.</description>
+    </item>
+    
+  </channel>
+</rss>

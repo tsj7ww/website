@@ -30,7 +30,7 @@ languages:
                   url: /
                   weight: 5
                 - name: Personal Website
-                  url: ../
+                  url: /../
                   weight: 10
                 - name: LinkedIn
                   url: https://linkedin.com/in/tsj7ww
