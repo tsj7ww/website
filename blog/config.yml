@@ -29,7 +29,7 @@ languages:
                 - name: Home
                   url: /
                   weight: 5
-                - name: Personal Website
+                - name: About Me
                   url: https://trevsjordan.wordpress.com
                   weight: 10
                 - name: LinkedIn
