@@ -1,4 +1,4 @@
-baseURL: "https://tsj7ww.github.io/blog/"
+baseURL: "https://tsj7ww.github.io/"
 title: Trevor Jordan's Blog
 paginate: 5
 theme: PaperMod
@@ -26,11 +26,11 @@ languages:
           series: series
         menu:
             main:
-                - name: Blog
+                - name: Home
                   url: /
                   weight: 5
                 - name: Personal Website
-                  url: /../
+                  url: https://trevsjordan.wordpress.com
                   weight: 10
                 - name: LinkedIn
                   url: https://linkedin.com/in/tsj7ww
@@ -87,7 +87,7 @@ params:
         favicon: "./assets/favicon.ico"
 
     socialIcons:
-        - name: cv
+        - name: googlescholar
           url: "https://trevsjordan.wordpress.com"
         - name: linkedin
           url: "https://linkedin.com/in/tsj7ww"

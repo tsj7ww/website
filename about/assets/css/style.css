@@ -48,23 +48,25 @@ a:hover {
 }
 
 p {
-  margin: 25px 0;
+  /* margin: 10px 0; */
   padding: 0;
   font-size: 15px;
-  color: #999999;
-  line-height: 28px;
+  color: #000;
+  line-height: 20px;
+  text-align: center;
 }
 
 .btn {
   background: #ffffff;
   border: medium none;
-  color: #000;
   font-size: 13px;
   height: 50px;
+  width: 25vh;
   line-height: 50px;
-  padding: 0 30px;
+  /* padding: 15px; */
   /* text-transform: uppercase; */
   border-radius: 10px;
+  justify-self: center;
 }
 
 .btn:hover,
@@ -85,26 +87,6 @@ p {
   font-size: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
-}
-
-.form-control {
-  background-color: transparent;
-  border: 1px solid #999;
-  border-radius: 0;
-  color: #999999;
-  font-size: 12px;
-  font-weight: 500;
-  height: 50px;
-  letter-spacing: 0.1em;
-  padding-left: 10px;
-  margin: 0 0 25px 0;
-  line-height: 14px;
-  text-transform: uppercase;
-}
-
-.form-control:focus {
-  box-shadow: none;
-  outline: 0 none;
 }
 
 .paddsection {
@@ -220,6 +202,7 @@ p {
 
 .journal-block .journal-info img {
   max-width: 100%;
+  justify-content: center;
 }
 
 .journal-block .journal-info .journal-txt {
@@ -257,23 +240,28 @@ p {
   margin: 0;
   padding: 0;
   color: #fff;
+  text-align: left;
 }
 
-.contact-details li {
-  padding-bottom: 10px;
+.contact-details p {
+  padding-bottom: 0px;
   color: #fff;
 }
 
 #contact input,
 #contact textarea {
   width: 100%;
-  margin-bottom: 5px;
+  margin: 5px;
   color: #000;
   font-weight: bold;
 }
 
-#contact textarea {
-  min-height: 160px;
+.btn p {
+  padding-bottom: 0px;
+  color: #000;
+  line-height: 10px;
+  text-align: center;
+  
 }
 
 /** Width between 1200x to 0
