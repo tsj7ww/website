@@ -67,8 +67,8 @@ params:
     profileMode:
         enabled: false
         title: Trevor Jordan's Blog
-        imageUrl: "#"
-        imageTitle: my image
+        # imageUrl: "#"
+        # imageTitle: my image
         # imageWidth: 120
         # imageHeight: 120
         buttons:
