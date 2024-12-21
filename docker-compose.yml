@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  website:
+    container_name: website
+    image: website
+    build: .
+    volumes:
+      - .:/workspace
+    ports:
+      - "8080:8080"  # live-server for static pages
+    command: live-server --port=8080 --host=0.0.0.0 --no-browser /workspace/static
