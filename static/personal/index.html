@@ -1,56 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="../index.html" class="nav-link">Home</a>
-            <a href="../business/index.html" class="nav-link">Business</a>
-            <a href="../blog/index.html" class="nav-link">Blog</a>  <!-- Updated blog link -->
-        </nav>
-    </header>
-    <!-- Rest of the content remains the same -->
-    <main class="main">
-        <section class="hero">
-            <div class="profile-container">
-                <img src="assets/profile.jpg" alt="Profile Picture" class="profile-image">
-            </div>
-            <h1 class="name">Your Name</h1>
-            <p class="tagline">Data Scientist & Web Developer</p>
-        </section>
 
-        <section class="about" id="about">
-            <h2>About Me</h2>
-            <p>A passionate developer with expertise in data analysis and web development. 
-               I love creating insightful visualizations and building efficient web solutions.</p>
-        </section>
+<!-- Hero Section -->
+<header class="hero-section text-center py-5">
+  <div class="container">
+    <img src="your-photo.jpg" alt="Your Photo" class="rounded-circle shadow-lg mb-4" width="150">
+    <h1 class="fw-bold">Your Name</h1>
+    <p class="lead text-muted">Data Scientist | Analytics Expert | Behavioral Economics Enthusiast</p>
+    <a href="../blog/" class="btn btn-lg blog-btn mt-3">Visit My Blog</a>
+  </div>
+</header>
 
-        <section class="portfolio" id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <!-- Portfolio items will be dynamically added by portfolio.js -->
-            </div>
-        </section>
+<!-- About Section -->
+<section class="about-section py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">About Me</h2>
+      <p class="about-text">
+        I specialize in leveraging data to drive insights, with expertise in advanced analytics, behavioral psychology, and programming.
+        I'm passionate about creating innovative solutions that drive measurable impact.
+      </p>
+    </div>
+  </section>
 
-        <section class="contact" id="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p>Email: your.email@example.com</p>
-                <p>LinkedIn: linkedin.com/in/yourprofile</p>
-                <p>GitHub: github.com/yourusername</p>
-            </div>
-        </section>
-    </main>
+<!-- Projects Section -->
+<section class="projects-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Featured Projects</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card shadow" data-bs-toggle="modal" data-bs-target="#projectModal" id="project1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Optimizing Customer Retention</h5>
+            <p class="text-muted text-center">Advanced predictive analytics for customer behavior.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card shadow" data-bs-toggle="modal" data-bs-target="#projectModal" id="project2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Fraud Detection System</h5>
+            <p class="text-muted text-center">Automated anomaly detection using machine learning.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card shadow" data-bs-toggle="modal" data-bs-target="#projectModal" id="project3">
+          <div class="card-body">
+            <h5 class="card-title text-center">Climate Impact Model</h5>
+            <p class="text-muted text-center">Modeling environmental impacts for policy decisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="footer">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
+<!-- Project Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 id="project-title">Project Title</h4>
+            <p id="project-summary">
+              Project summary, including goals, challenges, methodology, and key results.
+            </p>
+            <a href="#" id="project-github-link" target="_blank" class="btn btn-outline-primary">View GitHub Repo</a>
+          </div>
+          <div class="col-md-6">
+            <div id="d3-container" style="height: 300px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <script src="portfolio.js"></script>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p>&copy; 2024 Your Name. Crafted with care and expertise.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS and D3.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>

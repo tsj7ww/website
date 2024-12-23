@@ -6,14 +6,13 @@ docker-compose up --build
 docker exec -it website bash
 
 # Build hugo static files
-hugo -D
-
+hugo -D # drafts
+hugo # no drafts
 
 # Inside the blog/ folder, initialize Hugo
 hugo new site blog
 cd blog
 # Add a theme
-git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-echo 'theme = "ananke"' >> config.toml
+git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperModgit submodule update --init --recursive
 # Create blog posts
 hugo new posts/first-post.md

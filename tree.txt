@@ -1,23 +1,84 @@
 .
-├── Dockerfile
-├── README.md
-├── blog/
-├── docker-compose.yml
-├── scripts
-│   └── startup.sh
-├── static
-│   ├── business
-│   │   ├── assets
-│   │   │   └── logo.jpg
-│   │   ├── index.html
-│   │   ├── script.js
-│   │   └── style.css
-│   ├── index.html
-│   ├── personal
-│   │   ├── assets
-│   │   │   └── profile.jpg
-│   │   ├── index.html
-│   │   ├── portfolio.js
-│   │   └── style.css
-│   ├── script.js
-│   └── style.css
+|-- Dockerfile
+|-- README.md
+|-- blog
+|   |-- archetypes
+|   |   `-- default.md
+|   |-- assets
+|   |-- config.toml
+|   |-- content
+|   |   |-- _index.md
+|   |   `-- posts
+|   |       |-- 20151201-early-education.md
+|   |       `-- d3-visualization.md
+|   |-- data
+|   |   `-- example.csv
+|   |-- i18n
+|   |-- layouts
+|   |-- resources
+|   |   `-- _gen
+|   |       |-- assets
+|   |       `-- images
+|   |-- static
+|   |   `-- js
+|   |       `-- d3-visualization.js
+|   `-- themes
+|       `-- PaperMod
+|           |-- LICENSE
+|           |-- README.md
+|           |-- assets
+|           |-- go.mod
+|           |-- i18n
+|           |-- images
+|           |-- layouts
+|           `-- theme.toml
+|-- docker-compose.yml
+|-- scripts
+|   |-- hugo_build.sh
+|   `-- startup.sh
+|-- static
+|   |-- blog
+|   |   |-- 404.html
+|   |   |-- assets
+|   |   |   `-- css
+|   |   |-- categories
+|   |   |   |-- index.html
+|   |   |   `-- index.xml
+|   |   |-- data
+|   |   |   `-- example.csv
+|   |   |-- index.html
+|   |   |-- index.xml
+|   |   |-- js
+|   |   |   `-- d3-visualization.js
+|   |   |-- page
+|   |   |   `-- 1
+|   |   |-- posts
+|   |   |   |-- 20151201-early-education
+|   |   |   |-- d3-visualization
+|   |   |   |-- index.html
+|   |   |   |-- index.xml
+|   |   |   `-- page
+|   |   |-- sitemap.xml
+|   |   `-- tags
+|   |       |-- index.html
+|   |       `-- index.xml
+|   |-- business
+|   |   |-- assets
+|   |   |   `-- logo.jpg
+|   |   |-- index.html
+|   |   |-- script.js
+|   |   `-- style.css
+|   |-- data
+|   |   `-- example.csv
+|   |-- index.html
+|   |-- personal
+|   |   |-- assets
+|   |   |   `-- profile.jpg
+|   |   |-- index.html
+|   |   |-- portfolio.js
+|   |   `-- style.css
+|   |-- script.js
+|   `-- style.css
+`-- tree.txt
+
+40 directories, 41 files

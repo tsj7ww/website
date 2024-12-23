@@ -1,0 +1,96 @@
+# Base settings
+# baseURL: "https://tsj7ww.github.io/blog/"
+baseURL: "/blog/"
+publishDir: "../static/blog"
+title: "Analytics & Modeling Blog"
+copyright: "© 2024 Your Name"
+paginate: 10
+theme: [PaperMod]
+
+# Enable necessary features
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+# Language-specific settings
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Posts
+          url: posts/
+          weight: 3
+        - name: Archive
+          url: archives/
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: Portfolio
+          url: ../personal
+          weight: 15
+
+# Minify options
+minify:
+  disableXML: true
+
+# Site-wide parameters
+params:
+  env: production
+  description: "Analytics & Modeling Blog - Insights and Techniques in Data Analysis"
+  author: Your Name
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  images: ["images/analytics-blog-cover.png"]
+
+  homeInfoParams:
+    Title: "Analytics & Modeling Blog"
+    Content: >
+      Welcome to the Analytics & Modeling Blog, where we explore insights and techniques in data analysis, predictive modeling, and analytics strategy.
+
+  profileMode:
+    enabled: false
+
+  socialIcons:
+    - name: github
+      title: View Source on Github
+      url: "https://github.com/yourusername"  # Replace with your GitHub URL
+    - name: LinkedIn
+      title: Connect on LinkedIn
+      url: "https://linkedin.com/in/yourprofile"  # Replace with your LinkedIn URL
+
+# Markup settings
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+# Outputs
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

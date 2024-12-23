@@ -1,8 +1,8 @@
-+++
-title = "US K-12 Public Education"
-date = 2015-12-01
-draft = true
-+++
+---
+title: "US K-12 Public Education"
+date: 2015-12-01
+draft: true
+---
 
 What does the average person think about the United States education system? In general, I think most Americans would believe that they are very competitive when it comes to education. Of the top 10 best universities in the world, 8 can be found in the United States. These statistics, however, unjustly display the underlying issue plaguing the US education system that over time is making Americans less competitive in a growing global economy. For instance, University of California – Berkeley is ranked by US News as the 3rd best university in the world; however, it is also ranked within the top 25 universities with the most international students. This issue extends to other globally competitive universities, such as Columbia, Brown, Georgetown, and many others. This alarming number brings up the issue, maybe our students are not as globally competitive as we initially thought? But why is that?
 

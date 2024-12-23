@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Analytics &amp; Modeling Blog</title>
+    <link>/blog/posts/</link>
+    <description>Recent content in Posts on Analytics &amp; Modeling Blog</description>
+    <image>
+      <title>Analytics &amp; Modeling Blog</title>
+      <url>/blog/images/analytics-blog-cover.png</url>
+      <link>/blog/images/analytics-blog-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>en</language>
+    <copyright>2024 Your Name</copyright>
+    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEST1 Complex D3.js Visualization</title>
+      <link>/blog/posts/d3-viz/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/d3-viz/</guid>
+      <description>A blog post demonstrating a scatter plot with a trendline using D3.js.</description>
+    </item>
+    <item>
+      <title>TEST Complex D3.js Visualization</title>
+      <link>/blog/posts/d3-visualization/</link>
+      <pubDate>Thu, 19 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/d3-visualization/</guid>
+      <description>A blog post demonstrating a scatter plot with a trendline using D3.js.</description>
+    </item>
+  </channel>
+</rss>
