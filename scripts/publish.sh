@@ -4,6 +4,12 @@
 cd "$(dirname "$0")"
 cd ../../
 
+# Check if target directory exists
+if [ ! -d "tsj7ww.github.io" ]; then
+    echo "Error: tsj7ww.github.io directory not found"
+    exit 1
+fi
+
 # Remove all files in tsj7ww.github.io except .gitignore and .github folder
 cd tsj7ww.github.io
 find . -not -name '.gitignore' \
