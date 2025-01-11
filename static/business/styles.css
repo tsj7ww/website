@@ -1,0 +1,193 @@
+/* styles.css */
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #1976D2;
+    --background-color: #FAFAFA;
+    --surface-color: #FFFFFF;
+    --text-primary: rgba(0, 0, 0, 0.87);
+    --text-secondary: rgba(0, 0, 0, 0.6);
+    --card-background: #F5F5F5;
+    --elevation-1: 0 2px 4px -1px rgba(0,0,0,0.06), 
+                   0 4px 6px -1px rgba(0,0,0,0.1);
+    --elevation-2: 0 4px 6px -1px rgba(0,0,0,0.1),
+                   0 2px 4px -1px rgba(0,0,0,0.06);
+    --elevation-hover: 0 8px 12px -1px rgba(0,0,0,0.1),
+                      0 4px 6px -1px rgba(0,0,0,0.06);
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+.navbar {
+    padding: 1rem 0;
+    background-color: var(--surface-color);
+    box-shadow: var(--elevation-1);
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.hero {
+    padding: 6rem 0;
+    background-color: var(--surface-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 0.1), transparent);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.dashboard-container {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--elevation-2);
+}
+
+.dashboard-svg {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-container:hover .dashboard-svg {
+    transform: scale(1.02);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+}
+
+.hero .lead {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.features {
+    padding: 6rem 0;
+    background-color: var(--background-color);
+}
+
+.feature-container {
+    background-color: var(--surface-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--elevation-1);
+}
+
+.feature-card {
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: var(--card-background);
+    box-shadow: var(--elevation-2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--elevation-hover);
+}
+
+.feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    padding: 1rem;
+    background-color: rgba(33, 150, 243, 0.1);
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--elevation-1);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    box-shadow: var(--elevation-2);
+    transform: translateY(-1px);
+}
+
+.footer {
+    padding: 2rem 0;
+    background-color: var(--surface-color);
+    color: var(--text-secondary);
+    box-shadow: var(--elevation-1);
+}
+
+/* Material Design Typography */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    letter-spacing: -0.5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-container {
+        padding: 1rem;
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+}

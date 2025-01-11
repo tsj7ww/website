@@ -1,75 +1,96 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Name</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AutoML Consulting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <div class="logo">
-                <img src="assets/logo.png" alt="Business Logo">
+            <a class="navbar-brand" href="#">AutoML Consulting</a>
+            <a href="https://your-full-website-url.com" class="btn btn-primary">Go to Full Platform</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Automated Machine Learning Solutions</h1>
+                    <p class="lead">Transform your business with intelligent automation and data-driven insights</p>
+                </div>
+                <div class="col-lg-6 dashboard-container">
+                    <object data="assets/dashboard.svg" type="image/svg+xml" class="dashboard-svg">
+                        Your browser does not support SVG
+                    </object>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <section id="hero" class="hero">
+    <section class="features" id="features">
         <div class="container">
-            <h1>Welcome to [Your Business Name]</h1>
-            <p>Your trusted partner in [industry/service].</p>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
-    </section>
-
-    <section id="services" class="section">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service">
-                    <h3>Service 1</h3>
-                    <p>Description of Service 1.</p>
+            <h2 class="text-center mb-5">Our ML Pipeline</h2>
+            <div class="feature-container">
+                <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon">🔌</div>
+                        <h3>Data Connections</h3>
+                        <p>Seamlessly connect to any data source including databases, APIs, and cloud storage</p>
+                    </div>
                 </div>
-                <div class="service">
-                    <h3>Service 2</h3>
-                    <p>Description of Service 2.</p>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon">🔄</div>
+                        <h3>Preprocessing</h3>
+                        <p>Automated data cleaning, normalization, and feature encoding</p>
+                    </div>
                 </div>
-                <div class="service">
-                    <h3>Service 3</h3>
-                    <p>Description of Service 3.</p>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon">⚙️</div>
+                        <h3>Feature Engineering</h3>
+                        <p>Smart feature selection and generation for optimal model performance</p>
+                    </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon">🎯</div>
+                        <h3>Modeling</h3>
+                        <p>State-of-the-art algorithms automatically selected for your specific use case</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon">🎚️</div>
+                        <h3>Hyperparameter Tuning</h3>
+                        <p>Advanced optimization techniques to maximize model performance</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="icon">📊</div>
+                        <h3>Monitoring</h3>
+                        <p>Real-time performance tracking and model maintenance</p>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We are passionate about delivering high-quality [industry/service] solutions to our clients. Our team is committed to excellence and innovation.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have questions? Reach out to us at:</p>
-            <p>Email: <a href="mailto:info@business.com">info@business.com</a></p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 [Your Business Name]. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 AutoML Consulting. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,108 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevor Jordan - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-
-<!-- Hero Section -->
-<header class="hero-section text-center py-5">
-  <div class="container">
-    <img src="your-photo.jpg" alt="Your Photo" class="rounded-circle shadow-lg mb-4" width="150">
-    <h1 class="fw-bold">Your Name</h1>
-    <p class="lead text-muted">Data Scientist | Analytics Expert | Behavioral Economics Enthusiast</p>
-    <a href="../blog/" class="btn btn-lg blog-btn mt-3">Visit My Blog</a>
-  </div>
-</header>
-
-<!-- About Section -->
-<section class="about-section py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="mb-4">About Me</h2>
-      <p class="about-text">
-        I specialize in leveraging data to drive insights, with expertise in advanced analytics, behavioral psychology, and programming.
-        I'm passionate about creating innovative solutions that drive measurable impact.
-      </p>
-    </div>
-  </section>
-
-<!-- Projects Section -->
-<section class="projects-section py-5">
-  <div class="container">
-    <h2 class="text-center mb-5">Featured Projects</h2>
-    <div class="row g-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card shadow" data-bs-toggle="modal" data-bs-target="#projectModal" id="project1">
-          <div class="card-body">
-            <h5 class="card-title text-center">Optimizing Customer Retention</h5>
-            <p class="text-muted text-center">Advanced predictive analytics for customer behavior.</p>
-          </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Trevor Jordan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link blog-link" href="../blog">
+                            Blog <span class="external-arrow">→</span> <!-- target="_blank" -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card shadow" data-bs-toggle="modal" data-bs-target="#projectModal" id="project2">
-          <div class="card-body">
-            <h5 class="card-title text-center">Fraud Detection System</h5>
-            <p class="text-muted text-center">Automated anomaly detection using machine learning.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card project-card shadow" data-bs-toggle="modal" data-bs-target="#projectModal" id="project3">
-          <div class="card-body">
-            <h5 class="card-title text-center">Climate Impact Model</h5>
-            <p class="text-muted text-center">Modeling environmental impacts for policy decisions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </nav>
 
-<!-- Project Modal -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col-md-6">
-            <h4 id="project-title">Project Title</h4>
-            <p id="project-summary">
-              Project summary, including goals, challenges, methodology, and key results.
-            </p>
-            <a href="#" id="project-github-link" target="_blank" class="btn btn-outline-primary">View GitHub Repo</a>
-          </div>
-          <div class="col-md-6">
-            <div id="d3-container" style="height: 300px;"></div>
-          </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4">Hi, I'm Trevor</h1>
+                    <p class="lead">Data Science & Analytics</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+    </header>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-  <div class="container">
-    <p>&copy; 2024 Your Name. Crafted with care and expertise.</p>
-  </div>
-</footer>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="content-card">
+                        <h2>About Me</h2>
+                        <p>
+                          I'm a passionate analyst who loves modeling systems and behaviors with code. 
+                          I currently work in strategy & analytics at a bank, and studied economics at UVA 
+                          with additional coursework in statistics, math, and psychology. I also enjoy learning 
+                          about technology and computer science in my free time.
+                        </p>
+                        <div class="skills-container">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">SQL & Databases</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Shell</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Bootstrap JS and D3.js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="scripts.js"></script>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4">
+                    <div class="project-card" onclick="toggleCard(this)">
+                        <div class="project-header">
+                            <h3>Baseball Bets</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="project-content">
+                            <p>
+                              ⚾ 🎲 
+                              Data Science & Risk Management project using various baseball 
+                              data sources to predict game outcomes and make informed sports 
+                              bets. Predictions are generated using statistical models in a 
+                              two-tiered approach - one at the game level, and another using 
+                              a Discrete Event Simulator. The forecasts are then compared 
+                              against market odds to identify games with the highest potential 
+                              ROI from placing bets. This is assessed across all games in a given 
+                              period, and bets are placed strategically to minimize downside risk 
+                              while still realizing significant profits.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Monte Carlo</span>
+                                <span class="tech-tag">Risk Management</span>
+                            </div>
+                            <a href="https://github.com/tsj7ww/portfolio/blob/main/projects/baseball" 
+                            class="btn btn-primary mt-3">Github Repo <span class="external-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4">
+                    <div class="project-card" onclick="toggleCard(this)">
+                        <div class="project-header">
+                            <h3>Housing Regression</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="project-content">
+                            <p>
+                              🏠 📈
+                              Using housing data from Kaggle, I created a machine-learning regression 
+                              model to predict housing prices based on residence attributes.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Regression Modeling</span>
+                                <span class="tech-tag">LightGBM</span>
+                            </div>
+                            <a href="https://github.com/tsj7ww/portfolio/blob/main/projects/housing" 
+                            class="btn btn-primary mt-3">Github Repo <span class="external-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4">
+                    <div class="project-card" onclick="toggleCard(this)">
+                        <div class="project-header">
+                            <h3>COVID Time Series</h3>
+                            <span class="expand-icon">+</span>
+                        </div>
+                        <div class="project-content">
+                            <p>
+                              🏥 📉 
+                              Data Science project that uses a variety of Time Series models 
+                              (SARIMA, Prophet, Theta) to forecast COVID-19 cases in Richmond, VA.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Time Series</span>
+                                <span class="tech-tag">Prophet</span>
+                            </div>
+                            <a href="https://github.com/tsj7ww/portfolio/blob/main/projects/covid" 
+                            class="btn btn-primary mt-3">Github Repo <span class="external-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="content-card">
+                        <h2>Get In Touch</h2>
+                        <p>Feel free to reach out for collaborations or just hello</p>
+                        <div class="contact-links">
+                            <a href="https://github.com/tsj7ww" class="btn btn-outline-light">GitHub <span class="external-arrow">→</span></a>
+                            <a href="https://linkedin.com/in/trevor-s-jordan" class="btn btn-outline-light">LinkedIn <span class="external-arrow">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

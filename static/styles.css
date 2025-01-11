@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(24, 24, 24, 0.85);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.button-container {
+    display: flex;
+    gap: min(5vw, 40px);
+    width: 90vw;
+    max-width: 1200px;
+    justify-content: center;
+    /* Added flex-wrap and adjusted padding */
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.button {
+    flex: 1;
+    aspect-ratio: 1;
+    min-width: 280px;  /* Added minimum width */
+    max-width: 400px;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(24px, 4vw, 32px);
+    border-radius: 24px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.button-blue {
+    background-color: rgba(41, 66, 112, 0.85);
+}
+
+.button-blue:hover {
+    background-color: rgba(41, 66, 112, 0.95);
+}
+
+.button-orange {
+    background-color: rgba(180, 83, 9, 0.85);
+}
+
+.button-orange:hover {
+    background-color: rgba(180, 83, 9, 0.95);
+}
+
+/* Media query for vertical stacking on smaller screens */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

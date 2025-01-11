@@ -1,0 +1,84 @@
+<!-- dashboard.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f8f9fa"/>
+    
+    <!-- Dashboard Container -->
+    <rect x="20" y="20" width="760" height="560" rx="8" fill="white" stroke="#e9ecef" stroke-width="2"/>
+    
+    <!-- Top Navigation -->
+    <rect x="20" y="20" width="760" height="60" rx="8" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
+    <text x="40" y="55" font-family="Arial" font-size="18" font-weight="bold" fill="#2196F3">Analytics Dashboard</text>
+    
+    <!-- Metrics Cards -->
+    <g transform="translate(40, 100)">
+        <!-- Card 1 -->
+        <rect width="160" height="100" rx="6" fill="white" stroke="#e9ecef" stroke-width="2"/>
+        <text x="20" y="30" font-family="Arial" font-size="14" fill="#6c757d">Total Users</text>
+        <text x="20" y="65" font-family="Arial" font-size="24" font-weight="bold" fill="#212529">24,582</text>
+        <path d="M20 80 L40 70 L60 75 L80 65" stroke="#2196F3" fill="none" stroke-width="2"/>
+        
+        <!-- Card 2 -->
+        <g transform="translate(180, 0)">
+            <rect width="160" height="100" rx="6" fill="white" stroke="#e9ecef" stroke-width="2"/>
+            <text x="20" y="30" font-family="Arial" font-size="14" fill="#6c757d">Active Sessions</text>
+            <text x="20" y="65" font-family="Arial" font-size="24" font-weight="bold" fill="#212529">1,247</text>
+            <path d="M20 80 L40 75 L60 65 L80 60" stroke="#4CAF50" fill="none" stroke-width="2"/>
+        </g>
+        
+        <!-- Card 3 -->
+        <g transform="translate(360, 0)">
+            <rect width="160" height="100" rx="6" fill="white" stroke="#e9ecef" stroke-width="2"/>
+            <text x="20" y="30" font-family="Arial" font-size="14" fill="#6c757d">Conversion Rate</text>
+            <text x="20" y="65" font-family="Arial" font-size="24" font-weight="bold" fill="#212529">3.2%</text>
+            <path d="M20 70 L40 75 L60 65 L80 80" stroke="#FFC107" fill="none" stroke-width="2"/>
+        </g>
+    </g>
+    
+    <!-- Main Chart -->
+    <g transform="translate(40, 220)">
+        <rect width="520" height="300" rx="6" fill="white" stroke="#e9ecef" stroke-width="2"/>
+        <text x="20" y="30" font-family="Arial" font-size="16" font-weight="bold" fill="#212529">User Activity</text>
+        
+        <!-- Chart Grid -->
+        <g transform="translate(40, 60)" stroke="#e9ecef" stroke-width="1">
+            <line x1="0" y1="0" x2="440" y2="0"/>
+            <line x1="0" y1="60" x2="440" y2="60"/>
+            <line x1="0" y1="120" x2="440" y2="120"/>
+            <line x1="0" y1="180" x2="440" y2="180"/>
+        </g>
+        
+        <!-- Chart Lines -->
+        <g transform="translate(40, 60)">
+            <path d="M0 180 L73 120 L146 150 L219 90 L292 60 L365 30 L438 60" 
+                  stroke="#2196F3" 
+                  fill="none" 
+                  stroke-width="3"/>
+            <path d="M0 150 L73 160 L146 140 L219 130 L292 120 L365 100 L438 90" 
+                  stroke="#4CAF50" 
+                  fill="none" 
+                  stroke-width="3"/>
+        </g>
+    </g>
+    
+    <!-- Side Panel -->
+    <g transform="translate(580, 220)">
+        <rect width="180" height="300" rx="6" fill="white" stroke="#e9ecef" stroke-width="2"/>
+        <text x="20" y="30" font-family="Arial" font-size="16" font-weight="bold" fill="#212529">Top Sources</text>
+        
+        <!-- Source List -->
+        <g transform="translate(20, 50)">
+            <text x="0" y="20" font-family="Arial" font-size="14" fill="#212529">1. Direct</text>
+            <text x="100" y="20" font-family="Arial" font-size="14" fill="#6c757d">45%</text>
+            
+            <text x="0" y="50" font-family="Arial" font-size="14" fill="#212529">2. Organic</text>
+            <text x="100" y="50" font-family="Arial" font-size="14" fill="#6c757d">30%</text>
+            
+            <text x="0" y="80" font-family="Arial" font-size="14" fill="#212529">3. Referral</text>
+            <text x="100" y="80" font-family="Arial" font-size="14" fill="#6c757d">15%</text>
+            
+            <text x="0" y="110" font-family="Arial" font-size="14" fill="#212529">4. Social</text>
+            <text x="100" y="110" font-family="Arial" font-size="14" fill="#6c757d">10%</text>
+        </g>
+    </g>
+</svg>
