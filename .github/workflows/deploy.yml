@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v3
+        with:
+          repository: ts7ww/website
+          path: source-repo
+
+      - name: Checkout destination repository
+        uses: actions/checkout@v3
+        with:
+          repository: tsj7ww/tsj7ww.github.io
+          token: ${{ secrets.PAT_TOKEN }}
+          path: dest-repo
+
+      - name: Clean destination repository
+        run: |
+          cd dest-repo
+          # Save .github directory
+          mv .github ../temp-github || true
+          # Remove all files except .git
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          # Restore .github directory
+          mv ../temp-github .github || true
+
+      - name: Copy static files
+        run: |
+          cp -r source-repo/static/* dest-repo/
+          
+      - name: Commit and push changes
+        run: |
+          cd dest-repo
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Deploy static files from website repository" || echo "No changes to commit"
+          git push
