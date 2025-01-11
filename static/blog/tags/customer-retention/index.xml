@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Customer Retention on Analytics &amp; Modeling Blog</title>
+    <link>/blog/tags/customer-retention/</link>
+    <description>Recent content in Customer Retention on Analytics &amp; Modeling Blog</description>
+    <image>
+      <title>Analytics &amp; Modeling Blog</title>
+      <url>/blog/images/analytics-blog-cover.png</url>
+      <link>/blog/images/analytics-blog-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>en</language>
+    <copyright>2025 Trevor Jordan</copyright>
+    <lastBuildDate>Thu, 21 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/tags/customer-retention/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Hidden Cost of Customer Churn: A Survival Analysis</title>
+      <link>/blog/posts/20240321-customer-churn/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/20240321-customer-churn/</guid>
+      <description>The Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: &amp;ldquo;How long do our customers typically stay with us?&amp;rdquo; As a data scientist at a SaaS company, I&amp;rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.
+Beyond Simple Averages The traditional approach would be to calculate the average customer lifetime. However, this method has a significant flaw: it doesn&amp;rsquo;t account for right-censored data – customers who are still active and haven&amp;rsquo;t churned yet.</description>
+    </item>
+  </channel>
+</rss>

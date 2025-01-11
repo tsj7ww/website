@@ -3,7 +3,7 @@
 baseURL: "/blog/"
 publishDir: "../static/blog"
 title: "Analytics & Modeling Blog"
-copyright: "© 2024 Your Name"
+copyright: "© 2025 Trevor Jordan"
 paginate: 10
 theme: [PaperMod]
 
@@ -40,7 +40,7 @@ languages:
           url: tags/
           weight: 10
         - name: Portfolio
-          url: ../personal
+          url: https://tsj7ww.github.io/personal
           weight: 15
 
 # Minify options
@@ -51,9 +51,9 @@ minify:
 params:
   env: production
   description: "Analytics & Modeling Blog - Insights and Techniques in Data Analysis"
-  author: Your Name
+  author: Trevor Jordan
   defaultTheme: auto
-  ShowShareButtons: true
+  # ShowShareButtons: true
   ShowReadingTime: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -75,10 +75,10 @@ params:
   socialIcons:
     - name: github
       title: View Source on Github
-      url: "https://github.com/yourusername"  # Replace with your GitHub URL
+      url: "https://github.com/tsj7ww"  # Replace with your GitHub URL
     - name: LinkedIn
       title: Connect on LinkedIn
-      url: "https://linkedin.com/in/yourprofile"  # Replace with your LinkedIn URL
+      url: "https://linkedin.com/in/trevor-s-jordan"  # Replace with your LinkedIn URL
 
 # Markup settings
 markup:

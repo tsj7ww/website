@@ -1,0 +1,58 @@
+{
+    "login_frequency": {
+      "mean": 2.34,
+      "std": 0.89,
+      "min": 0.5,
+      "max": 5.2,
+      "q25": 1.8,
+      "q75": 3.1
+    },
+    "feature_breadth": {
+      "mean": 12.5,
+      "std": 4.2,
+      "min": 5,
+      "max": 20,
+      "q25": 9,
+      "q75": 15
+    },
+    "advanced_features": {
+      "mean": 3.8,
+      "std": 2.1,
+      "min": 0,
+      "max": 10,
+      "q25": 2,
+      "q75": 5
+    },
+    "feature_coverage": {
+      "mean": 0.25,
+      "std": 0.08,
+      "min": 0.1,
+      "max": 0.4,
+      "q25": 0.18,
+      "q75": 0.3
+    },
+    "spending_per_user": {
+      "mean": 45.6,
+      "std": 15.3,
+      "min": 10,
+      "max": 120,
+      "q25": 35,
+      "q75": 58
+    },
+    "usage_intensity": {
+      "mean": 29.2,
+      "std": 12.1,
+      "min": 5,
+      "max": 80,
+      "q25": 20,
+      "q75": 40
+    },
+    "team_engagement": {
+      "mean": 8.9,
+      "std": 3.2,
+      "min": 2,
+      "max": 25,
+      "q25": 6.5,
+      "q75": 11.8
+    }
+  }

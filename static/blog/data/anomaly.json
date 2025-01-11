@@ -1,0 +1,144 @@
+{
+    "api_metrics": [
+      {
+        "timestamp": "2025-01-15T00:00:00.000Z",
+        "latency": 102.3,
+        "request_count": 1250,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:05:00.000Z",
+        "latency": 98.7,
+        "request_count": 1180,
+        "error_rate": 0.002,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:10:00.000Z",
+        "latency": 101.2,
+        "request_count": 1150,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:15:00.000Z",
+        "latency": 99.5,
+        "request_count": 1100,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:20:00.000Z",
+        "latency": 187.6,
+        "request_count": 1090,
+        "error_rate": 0.015,
+        "isAnomaly": true
+      },
+      {
+        "timestamp": "2025-01-15T00:25:00.000Z",
+        "latency": 195.3,
+        "request_count": 1050,
+        "error_rate": 0.018,
+        "isAnomaly": true
+      },
+      {
+        "timestamp": "2025-01-15T00:30:00.000Z",
+        "latency": 103.4,
+        "request_count": 1020,
+        "error_rate": 0.002,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:35:00.000Z",
+        "latency": 100.8,
+        "request_count": 980,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:40:00.000Z",
+        "latency": 97.2,
+        "request_count": 950,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:45:00.000Z",
+        "latency": 96.5,
+        "request_count": 920,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:50:00.000Z",
+        "latency": 95.8,
+        "request_count": 900,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T00:55:00.000Z",
+        "latency": 94.9,
+        "request_count": 880,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T01:00:00.000Z",
+        "latency": 93.7,
+        "request_count": 850,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T01:05:00.000Z",
+        "latency": 92.8,
+        "request_count": 830,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T01:10:00.000Z",
+        "latency": 165.4,
+        "request_count": 810,
+        "error_rate": 0.012,
+        "isAnomaly": true
+      },
+      {
+        "timestamp": "2025-01-15T01:15:00.000Z",
+        "latency": 91.5,
+        "request_count": 790,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T01:20:00.000Z",
+        "latency": 90.8,
+        "request_count": 770,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T01:25:00.000Z",
+        "latency": 90.2,
+        "request_count": 750,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T01:30:00.000Z",
+        "latency": 89.7,
+        "request_count": 730,
+        "error_rate": 0.001,
+        "isAnomaly": false
+      },
+      {
+        "timestamp": "2025-01-15T01:35:00.000Z",
+        "latency": 178.3,
+        "request_count": 710,
+        "error_rate": 0.014,
+        "isAnomaly": true
+      }
+    ]
+  }

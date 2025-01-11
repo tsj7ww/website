@@ -1,0 +1,20 @@
+{
+    "survival_data": [
+      {"time": 0, "survival_prob": 1.0, "lower_ci": 1.0, "upper_ci": 1.0},
+      {"time": 30, "survival_prob": 0.98, "lower_ci": 0.97, "upper_ci": 0.99},
+      {"time": 60, "survival_prob": 0.95, "lower_ci": 0.93, "upper_ci": 0.97},
+      {"time": 90, "survival_prob": 0.89, "lower_ci": 0.87, "upper_ci": 0.91},
+      {"time": 120, "survival_prob": 0.85, "lower_ci": 0.82, "upper_ci": 0.88},
+      {"time": 150, "survival_prob": 0.82, "lower_ci": 0.79, "upper_ci": 0.85},
+      {"time": 180, "survival_prob": 0.78, "lower_ci": 0.75, "upper_ci": 0.81},
+      {"time": 210, "survival_prob": 0.75, "lower_ci": 0.72, "upper_ci": 0.78},
+      {"time": 240, "survival_prob": 0.72, "lower_ci": 0.69, "upper_ci": 0.75},
+      {"time": 270, "survival_prob": 0.69, "lower_ci": 0.66, "upper_ci": 0.72},
+      {"time": 300, "survival_prob": 0.67, "lower_ci": 0.64, "upper_ci": 0.70},
+      {"time": 330, "survival_prob": 0.65, "lower_ci": 0.62, "upper_ci": 0.68},
+      {"time": 360, "survival_prob": 0.62, "lower_ci": 0.59, "upper_ci": 0.65},
+      {"time": 390, "survival_prob": 0.59, "lower_ci": 0.56, "upper_ci": 0.62},
+      {"time": 420, "survival_prob": 0.57, "lower_ci": 0.54, "upper_ci": 0.60},
+      {"time": 450, "survival_prob": 0.55, "lower_ci": 0.52, "upper_ci": 0.58}
+    ]
+  }

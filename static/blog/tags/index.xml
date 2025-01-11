@@ -11,35 +11,70 @@
     </image>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
-    <copyright>2024 Your Name</copyright>
-    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <copyright>2025 Trevor Jordan</copyright>
+    <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>D3</title>
-      <link>/blog/tags/d3/</link>
+      <title>Anomaly Detection</title>
+      <link>/blog/tags/anomaly-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/blog/tags/d3/</guid>
+      <guid>/blog/tags/anomaly-detection/</guid>
       <description></description>
     </item>
     <item>
-      <title>Scatter Plot</title>
-      <link>/blog/tags/scatter-plot/</link>
+      <title>D3.js</title>
+      <link>/blog/tags/d3.js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/blog/tags/scatter-plot/</guid>
+      <guid>/blog/tags/d3.js/</guid>
       <description></description>
     </item>
     <item>
-      <title>Trendline</title>
-      <link>/blog/tags/trendline/</link>
+      <title>DevOps</title>
+      <link>/blog/tags/devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/blog/tags/trendline/</guid>
+      <guid>/blog/tags/devops/</guid>
       <description></description>
     </item>
     <item>
-      <title>Visualization</title>
-      <link>/blog/tags/visualization/</link>
+      <title>Machine Learning</title>
+      <link>/blog/tags/machine-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/blog/tags/visualization/</guid>
+      <guid>/blog/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>/blog/tags/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Science</title>
+      <link>/blog/tags/data-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/data-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Feature Engineering</title>
+      <link>/blog/tags/feature-engineering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/feature-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Customer Retention</title>
+      <link>/blog/tags/customer-retention/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/customer-retention/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Survival Analysis</title>
+      <link>/blog/tags/survival-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/survival-analysis/</guid>
       <description></description>
     </item>
   </channel>

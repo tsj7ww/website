@@ -11,7 +11,36 @@
     </image>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
-    <copyright>2024 Your Name</copyright>
+    <copyright>2025 Trevor Jordan</copyright>
+    <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Infrastructure</title>
+      <link>/blog/categories/infrastructure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/categories/infrastructure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>/blog/categories/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Science</title>
+      <link>/blog/categories/data-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/categories/data-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Business Analytics</title>
+      <link>/blog/categories/business-analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/categories/business-analytics/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
