@@ -5,15 +5,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source repository
+      - name: Checkout current repository
         uses: actions/checkout@v3
-        with:
-          repository: ts7ww/website
-          path: source-repo
 
       - name: Checkout destination repository
         uses: actions/checkout@v3
@@ -34,7 +34,7 @@ jobs:
 
       - name: Copy static files
         run: |
-          cp -r source-repo/static/* dest-repo/
+          cp -r static/* dest-repo/
           
       - name: Commit and push changes
         run: |
