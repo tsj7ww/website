@@ -9,7 +9,7 @@ tags: [
 categories: ["Machine Learning", "Data Science"]
 ---
 
-Note: this post was created by GenAI (Claude) as is temporary filler content.
+Note: this post was created by GenAI (Claude) for temporary filler content.
 
 ## The Project That Changed Everything
 

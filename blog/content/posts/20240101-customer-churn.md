@@ -9,7 +9,7 @@ tags: [
 categories: ["Business Analytics"]
 ---
 
-Note: this post was created by GenAI (Claude) as is temporary filler content.
+Note: this post was created by GenAI (Claude) for temporary filler content.
 
 ## The Million Dollar Question
 

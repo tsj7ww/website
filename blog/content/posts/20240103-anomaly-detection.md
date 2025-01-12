@@ -9,7 +9,7 @@ tags: [
 categories: ["Machine Learning", "Infrastructure"]
 ---
 
-Note: this post was created by GenAI (Claude) as is temporary filler content.
+Note: this post was created by GenAI (Claude) for temporary filler content.
 
 ## The 3 AM Wake-up Call
 

@@ -14,7 +14,7 @@
       <link>/blog/posts/20240103-anomaly-detection/</link>
       <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/blog/posts/20240103-anomaly-detection/</guid>
-      <description>Note: this post was created by GenAI (Claude) as is temporary filler content.
+      <description>Note: this post was created by GenAI (Claude) for temporary filler content.
 The 3 AM Wake-up Call It was 3 AM when my phone buzzed with an urgent alert: our main API endpoint was experiencing unusual latency spikes. But here&amp;rsquo;s the twist - our newly implemented anomaly detection system caught this before any user reported issues. By the time I checked the dashboard, our automated remediation had already scaled up the necessary resources.</description>
     </item>
     <item>
@@ -22,15 +22,16 @@ The 3 AM Wake-up Call It was 3 AM when my phone buzzed with an urgent alert: our
       <link>/blog/posts/20240102-feature-engineering/</link>
       <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/blog/posts/20240102-feature-engineering/</guid>
-      <description>Note: this post was created by GenAI (Claude) as is temporary filler content.
-The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.</description>
+      <description>Note: this post was created by GenAI (Claude) for temporary filler content.
+The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.
+Beyond Raw Data Let&amp;rsquo;s look at real-world data and the process of transforming it into something more meaningful for our models.</description>
     </item>
     <item>
       <title>[GenAI Placeholder] Customer Churn / Survival Analysis</title>
       <link>/blog/posts/20240101-customer-churn/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/blog/posts/20240101-customer-churn/</guid>
-      <description>Note: this post was created by GenAI (Claude) as is temporary filler content.
+      <description>Note: this post was created by GenAI (Claude) for temporary filler content.
 The Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: &amp;ldquo;How long do our customers typically stay with us?&amp;rdquo; As a data scientist at a SaaS company, I&amp;rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.
 Beyond Simple Averages The traditional approach would be to calculate the average customer lifetime.</description>
     </item>
