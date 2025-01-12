@@ -4,16 +4,32 @@
     <title>Tags on Analytics &amp; Modeling Blog</title>
     <link>/blog/tags/</link>
     <description>Recent content in Tags on Analytics &amp; Modeling Blog</description>
-    <image>
-      <title>Analytics &amp; Modeling Blog</title>
-      <url>/blog/images/analytics-blog-cover.png</url>
-      <link>/blog/images/analytics-blog-cover.png</link>
-    </image>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
     <copyright>2025 Trevor Jordan</copyright>
-    <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science</title>
+      <link>/blog/tags/data-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/data-science/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>/blog/tags/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Development</title>
+      <link>/blog/tags/software-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/software-development/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Anomaly Detection</title>
       <link>/blog/tags/anomaly-detection/</link>
@@ -36,6 +52,13 @@
       <description></description>
     </item>
     <item>
+      <title>GenAI</title>
+      <link>/blog/tags/genai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/blog/tags/genai/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Machine Learning</title>
       <link>/blog/tags/machine-learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -43,17 +66,10 @@
       <description></description>
     </item>
     <item>
-      <title>Python</title>
-      <link>/blog/tags/python/</link>
+      <title>Placeholder</title>
+      <link>/blog/tags/placeholder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/blog/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Data Science</title>
-      <link>/blog/tags/data-science/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/blog/tags/data-science/</guid>
+      <guid>/blog/tags/placeholder/</guid>
       <description></description>
     </item>
     <item>

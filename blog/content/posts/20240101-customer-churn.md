@@ -1,10 +1,15 @@
 ---
-title: "The Hidden Cost of Customer Churn: A Survival Analysis"
-date: 2024-03-21
+title: "[GenAI Placeholder] Customer Churn / Survival Analysis"
+date: 2024-01-01
 draft: false
-tags: ["survival analysis", "customer retention", "data science", "Python", "D3.js"]
+tags: [
+    "survival analysis", "customer retention", "data science", 
+    "Python", "D3.js", "GenAI", "Placeholder"
+]
 categories: ["Business Analytics"]
 ---
+
+Note: this post was created by GenAI (Claude) as is temporary filler content.
 
 ## The Million Dollar Question
 

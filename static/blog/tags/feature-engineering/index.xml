@@ -4,23 +4,18 @@
     <title>Feature Engineering on Analytics &amp; Modeling Blog</title>
     <link>/blog/tags/feature-engineering/</link>
     <description>Recent content in Feature Engineering on Analytics &amp; Modeling Blog</description>
-    <image>
-      <title>Analytics &amp; Modeling Blog</title>
-      <url>/blog/images/analytics-blog-cover.png</url>
-      <link>/blog/images/analytics-blog-cover.png</link>
-    </image>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
     <copyright>2025 Trevor Jordan</copyright>
-    <lastBuildDate>Mon, 15 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/tags/feature-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Feature Engineering: The Art of Creating Better Model Inputs</title>
-      <link>/blog/posts/20240715-feature-engineering/</link>
-      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/blog/posts/20240715-feature-engineering/</guid>
-      <description>The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.
-Beyond Raw Data Let&amp;rsquo;s look at real-world data and the process of transforming it into something more meaningful for our models.</description>
+      <title>[GenAI Placeholder] Feature Engineering</title>
+      <link>/blog/posts/20240102-feature-engineering/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/20240102-feature-engineering/</guid>
+      <description>Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.</description>
     </item>
   </channel>
 </rss>

@@ -50,7 +50,7 @@ minify:
 # Site-wide parameters
 params:
   env: production
-  description: "Analytics & Modeling Blog - Insights and Techniques in Data Analysis"
+  description: "Analytics & Modeling Blog"
   author: Trevor Jordan
   defaultTheme: auto
   # ShowShareButtons: true
@@ -62,12 +62,15 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
-  images: ["images/analytics-blog-cover.png"]
+  # images: ["images/analytics-blog-cover.png"]
 
   homeInfoParams:
     Title: "Analytics & Modeling Blog"
     Content: >
-      Welcome to the Analytics & Modeling Blog, where we explore insights and techniques in data analysis, predictive modeling, and analytics strategy.
+      Blog about analytics & modeling topics.  
+      <br><br>
+      Learn → Practice → Post → Repeat
+    # Welcome to the Analytics & Modeling Blog, where we explore insights and techniques in data analysis, predictive modeling, and analytics strategy.
 
   profileMode:
     enabled: false

@@ -4,31 +4,35 @@
     <title>Data Science on Analytics &amp; Modeling Blog</title>
     <link>/blog/tags/data-science/</link>
     <description>Recent content in Data Science on Analytics &amp; Modeling Blog</description>
-    <image>
-      <title>Analytics &amp; Modeling Blog</title>
-      <url>/blog/images/analytics-blog-cover.png</url>
-      <link>/blog/images/analytics-blog-cover.png</link>
-    </image>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
     <copyright>2025 Trevor Jordan</copyright>
-    <lastBuildDate>Mon, 15 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Feature Engineering: The Art of Creating Better Model Inputs</title>
-      <link>/blog/posts/20240715-feature-engineering/</link>
-      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
-      <guid>/blog/posts/20240715-feature-engineering/</guid>
-      <description>The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.
-Beyond Raw Data Let&amp;rsquo;s look at real-world data and the process of transforming it into something more meaningful for our models.</description>
+      <title>Software (Python Package) Development</title>
+      <link>/blog/posts/package-development/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/package-development/</guid>
+      <description>This will be a post discussing python package development.
+Architecture Environment &amp;amp; Tools Testing Standards CI / CD Distribution &amp;amp; Releases Optimization Security &amp;amp; Errors Community &amp;amp; Maintenance </description>
     </item>
     <item>
-      <title>The Hidden Cost of Customer Churn: A Survival Analysis</title>
-      <link>/blog/posts/20240321-customer-churn/</link>
-      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>/blog/posts/20240321-customer-churn/</guid>
-      <description>The Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: &amp;ldquo;How long do our customers typically stay with us?&amp;rdquo; As a data scientist at a SaaS company, I&amp;rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.
-Beyond Simple Averages The traditional approach would be to calculate the average customer lifetime. However, this method has a significant flaw: it doesn&amp;rsquo;t account for right-censored data – customers who are still active and haven&amp;rsquo;t churned yet.</description>
+      <title>[GenAI Placeholder] Feature Engineering</title>
+      <link>/blog/posts/20240102-feature-engineering/</link>
+      <pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/20240102-feature-engineering/</guid>
+      <description>Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.</description>
+    </item>
+    <item>
+      <title>[GenAI Placeholder] Customer Churn / Survival Analysis</title>
+      <link>/blog/posts/20240101-customer-churn/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/20240101-customer-churn/</guid>
+      <description>Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: &amp;ldquo;How long do our customers typically stay with us?&amp;rdquo; As a data scientist at a SaaS company, I&amp;rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.
+Beyond Simple Averages The traditional approach would be to calculate the average customer lifetime.</description>
     </item>
   </channel>
 </rss>

@@ -4,23 +4,18 @@
     <title>Anomaly Detection on Analytics &amp; Modeling Blog</title>
     <link>/blog/tags/anomaly-detection/</link>
     <description>Recent content in Anomaly Detection on Analytics &amp; Modeling Blog</description>
-    <image>
-      <title>Analytics &amp; Modeling Blog</title>
-      <url>/blog/images/analytics-blog-cover.png</url>
-      <link>/blog/images/analytics-blog-cover.png</link>
-    </image>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
     <copyright>2025 Trevor Jordan</copyright>
-    <lastBuildDate>Sat, 11 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/tags/anomaly-detection/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Real-time Anomaly Detection: Catching Infrastructure Issues Before Users Do</title>
-      <link>/blog/posts/20250111-anomaly-detection/</link>
-      <pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>/blog/posts/20250111-anomaly-detection/</guid>
-      <description>The 3 AM Wake-up Call It was 3 AM when my phone buzzed with an urgent alert: our main API endpoint was experiencing unusual latency spikes. But here&amp;rsquo;s the twist - our newly implemented anomaly detection system caught this before any user reported issues. By the time I checked the dashboard, our automated remediation had already scaled up the necessary resources.
-Why Traditional Monitoring Falls Short Traditional monitoring relies heavily on static thresholds.</description>
+      <title>[GenAI Placeholder] Anomaly Detection</title>
+      <link>/blog/posts/20240103-anomaly-detection/</link>
+      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/20240103-anomaly-detection/</guid>
+      <description>Note: this post was created by GenAI (Claude) as is temporary filler content.
+The 3 AM Wake-up Call It was 3 AM when my phone buzzed with an urgent alert: our main API endpoint was experiencing unusual latency spikes. But here&amp;rsquo;s the twist - our newly implemented anomaly detection system caught this before any user reported issues. By the time I checked the dashboard, our automated remediation had already scaled up the necessary resources.</description>
     </item>
   </channel>
 </rss>

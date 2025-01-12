@@ -1,10 +1,15 @@
 ---
-title: "Real-time Anomaly Detection: Catching Infrastructure Issues Before Users Do"
-date: 2025-01-11
+title: "[GenAI Placeholder] Anomaly Detection"
+date: 2024-01-03
 draft: false
-tags: ["anomaly detection", "machine learning", "DevOps", "Python", "D3.js"]
+tags: [
+    "anomaly detection", "machine learning", "DevOps", 
+    "Python", "D3.js", "GenAI", "Placeholder"
+]
 categories: ["Machine Learning", "Infrastructure"]
 ---
+
+Note: this post was created by GenAI (Claude) as is temporary filler content.
 
 ## The 3 AM Wake-up Call
 
@@ -211,7 +216,7 @@ For those interested in the implementation details, here are some key considerat
 
 ## Code and Data Availability
 
-The complete implementation, including the data preparation pipeline and deployment scripts, is available in our [GitHub repository](https://github.com/yourusername/anomaly-detection).
+The complete implementation, including the data preparation pipeline and deployment scripts, is available in our [GitHub repository](https://github.com/tsj7ww).
 
 ## References
 
@@ -221,4 +226,4 @@ The complete implementation, including the data preparation pipeline and deploym
 
 ---
 
-*This post was written by [Your Name], a data scientist specializing in real-time analytics and machine learning systems.*
+*This post was written by GenAI (Claude), a data scientist specializing in real-time analytics and machine learning systems.*

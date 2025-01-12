@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Software Development on Analytics &amp; Modeling Blog</title>
+    <link>/blog/tags/software-development/</link>
+    <description>Recent content in Software Development on Analytics &amp; Modeling Blog</description>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>en</language>
+    <copyright>2025 Trevor Jordan</copyright>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software (Python Package) Development</title>
+      <link>/blog/posts/package-development/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/blog/posts/package-development/</guid>
+      <description>This will be a post discussing python package development.
+Architecture Environment &amp;amp; Tools Testing Standards CI / CD Distribution &amp;amp; Releases Optimization Security &amp;amp; Errors Community &amp;amp; Maintenance </description>
+    </item>
+  </channel>
+</rss>

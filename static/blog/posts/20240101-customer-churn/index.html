@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>[GenAI Placeholder] Customer Churn / Survival Analysis | Analytics &amp; Modeling Blog</title>
+<meta name="keywords" content="survival analysis, customer retention, data science, Python, D3.js, GenAI, Placeholder">
+<meta name="description" content="Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: &ldquo;How long do our customers typically stay with us?&rdquo; As a data scientist at a SaaS company, I&rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.
+Beyond Simple Averages The traditional approach would be to calculate the average customer lifetime.">
+<meta name="author" content="Trevor Jordan">
+<link rel="canonical" href="/blog/posts/20240101-customer-churn/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="/blog/posts/20240101-customer-churn/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="/blog/posts/20240101-customer-churn/">
+  <meta property="og:site_name" content="Analytics &amp; Modeling Blog">
+  <meta property="og:title" content="[GenAI Placeholder] Customer Churn / Survival Analysis">
+  <meta property="og:description" content="Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: “How long do our customers typically stay with us?” As a data scientist at a SaaS company, I’ve learned that seemingly simple questions often lead to the most fascinating analyses.
+Beyond Simple Averages The traditional approach would be to calculate the average customer lifetime.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-01T00:00:00+00:00">
+    <meta property="article:tag" content="Survival Analysis">
+    <meta property="article:tag" content="Customer Retention">
+    <meta property="article:tag" content="Data Science">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="D3.js">
+    <meta property="article:tag" content="GenAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[GenAI Placeholder] Customer Churn / Survival Analysis">
+<meta name="twitter:description" content="Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: &ldquo;How long do our customers typically stay with us?&rdquo; As a data scientist at a SaaS company, I&rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.
+Beyond Simple Averages The traditional approach would be to calculate the average customer lifetime.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "/blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "[GenAI Placeholder] Customer Churn / Survival Analysis",
+      "item": "/blog/posts/20240101-customer-churn/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[GenAI Placeholder] Customer Churn / Survival Analysis",
+  "name": "[GenAI Placeholder] Customer Churn \/ Survival Analysis",
+  "description": "Note: this post was created by GenAI (Claude) as is temporary filler content.\nThe Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: \u0026ldquo;How long do our customers typically stay with us?\u0026rdquo; As a data scientist at a SaaS company, I\u0026rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.\nBeyond Simple Averages The traditional approach would be to calculate the average customer lifetime.",
+  "keywords": [
+    "survival analysis", "customer retention", "data science", "Python", "D3.js", "GenAI", "Placeholder"
+  ],
+  "articleBody": "Note: this post was created by GenAI (Claude) as is temporary filler content.\nThe Million Dollar Question Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: “How long do our customers typically stay with us?” As a data scientist at a SaaS company, I’ve learned that seemingly simple questions often lead to the most fascinating analyses.\nBeyond Simple Averages The traditional approach would be to calculate the average customer lifetime. However, this method has a significant flaw: it doesn’t account for right-censored data – customers who are still active and haven’t churned yet. This is where survival analysis comes in.\nThe Data I pulled three years of customer data, including:\nCustomer sign-up dates Churn dates (if applicable) Monthly recurring revenue (MRR) Industry sector Company size Here’s a glimpse of our dataset (with anonymized data):\nimport pandas as pd import numpy as np from lifelines import KaplanMeierFitter import matplotlib.pyplot as plt import seaborn as sns import json # Load and prepare the data df = pd.DataFrame({ 'customer_id': ['C1001', 'C1002', 'C1003'], 'signup_date': ['2022-01-15', '2022-01-20', '2022-02-01'], 'churn_date': [None, '2023-05-10', '2024-01-05'], 'mrr': [1200, 800, 500], 'sector': ['Tech', 'Healthcare', 'Retail'], 'size': ['Small', 'Medium', 'Small'] }) # Convert dates to datetime df['signup_date'] = pd.to_datetime(df['signup_date']) df['churn_date'] = pd.to_datetime(df['churn_date']) print(df.head()) Interactive Survival Analysis Below is an interactive visualization of our customer survival analysis. The blue line represents the survival probability over time, with the shaded region showing the 95% confidence interval.\nImplementing the Analysis Let’s walk through how to perform survival analysis using Python’s lifelines library:\n# Calculate duration and event status df['duration'] = ( df['churn_date'].fillna(pd.Timestamp.now()) - df['signup_date'] ).dt.days df['churned'] = df['churn_date'].notna().astype(int) # Initialize the KaplanMeierFitter model kmf = KaplanMeierFitter() # Fit the model kmf.fit( durations=df['duration'], events=df['churned'], label='Overall Survival' ) # Generate survival data for visualization survival_data = pd.DataFrame({ 'time': kmf.timeline, 'survival_prob': kmf.survival_function_.values.flatten(), 'lower_ci': kmf.confidence_interval_['KM_estimate_lower_0.95'], 'upper_ci': kmf.confidence_interval_['KM_estimate_upper_0.95'] }) # Save to JSON for D3.js visualization survival_data.to_json('static/data/survival_data.json', orient='records') # Create a matplotlib visualization for static view plt.figure(figsize=(10, 6)) kmf.plot() plt.title('Customer Survival Analysis') plt.xlabel('Time (days)') plt.ylabel('Survival Probability') plt.grid(True) plt.savefig('static/images/survival_curve_static.png') plt.close() # Analyze survival by industry sector for sector in df['sector'].unique(): mask = df['sector'] == sector kmf.fit( durations=df.loc[mask, 'duration'], events=df.loc[mask, 'churned'], label=sector ) plt.figure(figsize=(10, 6)) kmf.plot() plt.title('Survival Analysis by Industry') plt.xlabel('Time (days)') plt.ylabel('Survival Probability') plt.grid(True) plt.savefig('static/images/survival_by_industry.png') plt.close() Key Findings Median Survival Time: The median customer lifetime is 425 days, with a 95% confidence interval of [398, 456] days.\nCritical Periods: We identified two critical periods where churn risk spikes:\nDays 80-100 (end of trial/onboarding period) Days 350-380 (annual contract renewal) Pattern Analysis: The survival curve shows several interesting patterns:\nA steep initial drop in the first 90 days (20% churn) A more gradual decline between 3-9 months A second significant drop around the 12-month mark Advanced Analysis: Cox Proportional Hazards We can go deeper by using a Cox Proportional Hazards model to understand which factors influence churn risk:\nfrom lifelines import CoxPHFitter # Prepare the data for Cox analysis cox_data = df.copy() cox_data['log_mrr'] = np.log(cox_data['mrr']) # Create dummy variables for categorical features cox_data = pd.get_dummies(cox_data, columns=['sector', 'size']) # Fit the Cox model cph = CoxPHFitter() cph.fit( cox_data, duration_col='duration', event_col='churned', covariates=['log_mrr', 'sector_Tech', 'sector_Healthcare', 'size_Small'] ) # Print the model summary print(cph.print_summary()) Business Impact Based on this analysis, we implemented several changes:\nEnhanced onboarding support during the first 90 days Proactive engagement 60 days before the annual renewal Industry-specific retention strategies The result? A 15% reduction in churn rate over six months, translating to approximately $2.1M in preserved annual revenue.\nNext Steps This analysis opened up several new questions we’re currently exploring:\nCan we predict churn probability for individual customers? How do feature usage patterns correlate with survival? What’s the optimal intervention timing for at-risk customers? Stay tuned for follow-up posts where we’ll dive into these questions using predictive modeling and causal inference techniques.\nReferences Survival Analysis: Techniques for Censored and Truncated Data (Klein \u0026 Moeschberger, 2003) Customer Churn Prediction Using Survival Analysis (Smith et al., 2023) The Elements of Statistical Learning (Hastie, Tibshirani, \u0026 Friedman, 2009) Lifelines Documentation: https://lifelines.readthedocs.io/ This post was written by [Your Name], a data scientist passionate about turning complex analyses into actionable business insights.\n",
+  "wordCount" : "683",
+  "inLanguage": "en",
+  "datePublished": "2024-01-01T00:00:00Z",
+  "dateModified": "2024-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Trevor Jordan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/blog/posts/20240101-customer-churn/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Analytics \u0026 Modeling Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/blog/" accesskey="h" title="Analytics &amp; Modeling Blog (Alt + H)">Analytics &amp; Modeling Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/blog/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tsj7ww.github.io/personal" title="Portfolio">
+                    <span>Portfolio</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="/blog/">Home</a>&nbsp;»&nbsp;<a href="/blog/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      [GenAI Placeholder] Customer Churn / Survival Analysis
+    </h1>
+    <div class="post-meta"><span title='2024-01-01 00:00:00 +0000 UTC'>January 1, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Trevor Jordan
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#the-million-dollar-question" aria-label="The Million Dollar Question">The Million Dollar Question</a></li>
+                <li>
+                    <a href="#beyond-simple-averages" aria-label="Beyond Simple Averages">Beyond Simple Averages</a></li>
+                <li>
+                    <a href="#the-data" aria-label="The Data">The Data</a></li>
+                <li>
+                    <a href="#interactive-survival-analysis" aria-label="Interactive Survival Analysis">Interactive Survival Analysis</a></li>
+                <li>
+                    <a href="#implementing-the-analysis" aria-label="Implementing the Analysis">Implementing the Analysis</a></li>
+                <li>
+                    <a href="#key-findings" aria-label="Key Findings">Key Findings</a></li>
+                <li>
+                    <a href="#advanced-analysis-cox-proportional-hazards" aria-label="Advanced Analysis: Cox Proportional Hazards">Advanced Analysis: Cox Proportional Hazards</a></li>
+                <li>
+                    <a href="#business-impact" aria-label="Business Impact">Business Impact</a></li>
+                <li>
+                    <a href="#next-steps" aria-label="Next Steps">Next Steps</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Note: this post was created by GenAI (Claude) as is temporary filler content.</p>
+<h2 id="the-million-dollar-question">The Million Dollar Question<a hidden class="anchor" aria-hidden="true" href="#the-million-dollar-question">#</a></h2>
+<p>Last week, my colleague Sarah dropped by my desk with what seemed like a simple question: &ldquo;How long do our customers typically stay with us?&rdquo; As a data scientist at a SaaS company, I&rsquo;ve learned that seemingly simple questions often lead to the most fascinating analyses.</p>
+<h2 id="beyond-simple-averages">Beyond Simple Averages<a hidden class="anchor" aria-hidden="true" href="#beyond-simple-averages">#</a></h2>
+<p>The traditional approach would be to calculate the average customer lifetime. However, this method has a significant flaw: it doesn&rsquo;t account for right-censored data – customers who are still active and haven&rsquo;t churned yet. This is where survival analysis comes in.</p>
+<h2 id="the-data">The Data<a hidden class="anchor" aria-hidden="true" href="#the-data">#</a></h2>
+<p>I pulled three years of customer data, including:</p>
+<ul>
+<li>Customer sign-up dates</li>
+<li>Churn dates (if applicable)</li>
+<li>Monthly recurring revenue (MRR)</li>
+<li>Industry sector</li>
+<li>Company size</li>
+</ul>
+<p>Here&rsquo;s a glimpse of our dataset (with anonymized data):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">lifelines</span> <span class="kn">import</span> <span class="n">KaplanMeierFitter</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Load and prepare the data</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;customer_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;C1001&#39;</span><span class="p">,</span> <span class="s1">&#39;C1002&#39;</span><span class="p">,</span> <span class="s1">&#39;C1003&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;signup_date&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;2022-01-15&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-01-20&#39;</span><span class="p">,</span> <span class="s1">&#39;2022-02-01&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;churn_date&#39;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;2023-05-10&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-01-05&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;mrr&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;sector&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Tech&#39;</span><span class="p">,</span> <span class="s1">&#39;Healthcare&#39;</span><span class="p">,</span> <span class="s1">&#39;Retail&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Small&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Convert dates to datetime</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;signup_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;signup_date&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span></span></code></pre></div><h2 id="interactive-survival-analysis">Interactive Survival Analysis<a hidden class="anchor" aria-hidden="true" href="#interactive-survival-analysis">#</a></h2>
+<p>Below is an interactive visualization of our customer survival analysis. The blue line represents the survival probability over time, with the shaded region showing the 95% confidence interval.</p>
+<div id="survival-curve"></div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/blog/js/survival.js"></script>
+<style>
+#survival-curve {
+    width: 100%;
+    min-height: 500px;
+    margin: 20px 0;
+    /* background: #1a1a1a; */
+    border-radius: 8px;
+    padding: 20px;
+}
+#survival-curve svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+</style>
+<h2 id="implementing-the-analysis">Implementing the Analysis<a hidden class="anchor" aria-hidden="true" href="#implementing-the-analysis">#</a></h2>
+<p>Let&rsquo;s walk through how to perform survival analysis using Python&rsquo;s lifelines library:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Calculate duration and event status</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">now</span><span class="p">())</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;signup_date&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">days</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;churned&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;churn_date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Initialize the KaplanMeierFitter model</span>
+</span></span><span class="line"><span class="cl"><span class="n">kmf</span> <span class="o">=</span> <span class="n">KaplanMeierFitter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fit the model</span>
+</span></span><span class="line"><span class="cl"><span class="n">kmf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">durations</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">events</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;churned&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Overall Survival&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Generate survival data for visualization</span>
+</span></span><span class="line"><span class="cl"><span class="n">survival_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="n">kmf</span><span class="o">.</span><span class="n">timeline</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;survival_prob&#39;</span><span class="p">:</span> <span class="n">kmf</span><span class="o">.</span><span class="n">survival_function_</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;lower_ci&#39;</span><span class="p">:</span> <span class="n">kmf</span><span class="o">.</span><span class="n">confidence_interval_</span><span class="p">[</span><span class="s1">&#39;KM_estimate_lower_0.95&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;upper_ci&#39;</span><span class="p">:</span> <span class="n">kmf</span><span class="o">.</span><span class="n">confidence_interval_</span><span class="p">[</span><span class="s1">&#39;KM_estimate_upper_0.95&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Save to JSON for D3.js visualization</span>
+</span></span><span class="line"><span class="cl"><span class="n">survival_data</span><span class="o">.</span><span class="n">to_json</span><span class="p">(</span><span class="s1">&#39;static/data/survival_data.json&#39;</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a matplotlib visualization for static view</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">kmf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Customer Survival Analysis&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (days)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Survival Probability&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;static/images/survival_curve_static.png&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Analyze survival by industry sector</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">sector</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mask</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">sector</span>
+</span></span><span class="line"><span class="cl">    <span class="n">kmf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">durations</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span> <span class="s1">&#39;duration&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">events</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">,</span> <span class="s1">&#39;churned&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">label</span><span class="o">=</span><span class="n">sector</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">kmf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Survival Analysis by Industry&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (days)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Survival Probability&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;static/images/survival_by_industry.png&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div><h2 id="key-findings">Key Findings<a hidden class="anchor" aria-hidden="true" href="#key-findings">#</a></h2>
+<ol>
+<li>
+<p><strong>Median Survival Time</strong>: The median customer lifetime is 425 days, with a 95% confidence interval of [398, 456] days.</p>
+</li>
+<li>
+<p><strong>Critical Periods</strong>: We identified two critical periods where churn risk spikes:</p>
+<ul>
+<li>Days 80-100 (end of trial/onboarding period)</li>
+<li>Days 350-380 (annual contract renewal)</li>
+</ul>
+</li>
+<li>
+<p><strong>Pattern Analysis</strong>: The survival curve shows several interesting patterns:</p>
+<ul>
+<li>A steep initial drop in the first 90 days (20% churn)</li>
+<li>A more gradual decline between 3-9 months</li>
+<li>A second significant drop around the 12-month mark</li>
+</ul>
+</li>
+</ol>
+<h2 id="advanced-analysis-cox-proportional-hazards">Advanced Analysis: Cox Proportional Hazards<a hidden class="anchor" aria-hidden="true" href="#advanced-analysis-cox-proportional-hazards">#</a></h2>
+<p>We can go deeper by using a Cox Proportional Hazards model to understand which factors influence churn risk:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">lifelines</span> <span class="kn">import</span> <span class="n">CoxPHFitter</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Prepare the data for Cox analysis</span>
+</span></span><span class="line"><span class="cl"><span class="n">cox_data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">cox_data</span><span class="p">[</span><span class="s1">&#39;log_mrr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">cox_data</span><span class="p">[</span><span class="s1">&#39;mrr&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create dummy variables for categorical features</span>
+</span></span><span class="line"><span class="cl"><span class="n">cox_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">cox_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sector&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Fit the Cox model</span>
+</span></span><span class="line"><span class="cl"><span class="n">cph</span> <span class="o">=</span> <span class="n">CoxPHFitter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">cph</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cox_data</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">duration_col</span><span class="o">=</span><span class="s1">&#39;duration&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">event_col</span><span class="o">=</span><span class="s1">&#39;churned&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">covariates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;log_mrr&#39;</span><span class="p">,</span> <span class="s1">&#39;sector_Tech&#39;</span><span class="p">,</span> <span class="s1">&#39;sector_Healthcare&#39;</span><span class="p">,</span> <span class="s1">&#39;size_Small&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Print the model summary</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">cph</span><span class="o">.</span><span class="n">print_summary</span><span class="p">())</span>
+</span></span></code></pre></div><h2 id="business-impact">Business Impact<a hidden class="anchor" aria-hidden="true" href="#business-impact">#</a></h2>
+<p>Based on this analysis, we implemented several changes:</p>
+<ol>
+<li>Enhanced onboarding support during the first 90 days</li>
+<li>Proactive engagement 60 days before the annual renewal</li>
+<li>Industry-specific retention strategies</li>
+</ol>
+<p>The result? A 15% reduction in churn rate over six months, translating to approximately $2.1M in preserved annual revenue.</p>
+<h2 id="next-steps">Next Steps<a hidden class="anchor" aria-hidden="true" href="#next-steps">#</a></h2>
+<p>This analysis opened up several new questions we&rsquo;re currently exploring:</p>
+<ul>
+<li>Can we predict churn probability for individual customers?</li>
+<li>How do feature usage patterns correlate with survival?</li>
+<li>What&rsquo;s the optimal intervention timing for at-risk customers?</li>
+</ul>
+<p>Stay tuned for follow-up posts where we&rsquo;ll dive into these questions using predictive modeling and causal inference techniques.</p>
+<h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
+<ol>
+<li>Survival Analysis: Techniques for Censored and Truncated Data (Klein &amp; Moeschberger, 2003)</li>
+<li>Customer Churn Prediction Using Survival Analysis (Smith et al., 2023)</li>
+<li>The Elements of Statistical Learning (Hastie, Tibshirani, &amp; Friedman, 2009)</li>
+<li>Lifelines Documentation: <a href="https://lifelines.readthedocs.io/">https://lifelines.readthedocs.io/</a></li>
+</ol>
+<hr>
+<p><em>This post was written by [Your Name], a data scientist passionate about turning complex analyses into actionable business insights.</em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="/blog/tags/survival-analysis/">Survival Analysis</a></li>
+      <li><a href="/blog/tags/customer-retention/">Customer Retention</a></li>
+      <li><a href="/blog/tags/data-science/">Data Science</a></li>
+      <li><a href="/blog/tags/python/">Python</a></li>
+      <li><a href="/blog/tags/d3.js/">D3.js</a></li>
+      <li><a href="/blog/tags/genai/">GenAI</a></li>
+      <li><a href="/blog/tags/placeholder/">Placeholder</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="/blog/posts/20240102-feature-engineering/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>[GenAI Placeholder] Feature Engineering</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© 2025 Trevor Jordan</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

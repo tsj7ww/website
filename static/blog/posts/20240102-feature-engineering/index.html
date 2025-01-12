@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>[GenAI Placeholder] Feature Engineering | Analytics &amp; Modeling Blog</title>
+<meta name="keywords" content="feature engineering, machine learning, Python, data science, D3.js, GenAI, Placeholder">
+<meta name="description" content="Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.">
+<meta name="author" content="Trevor Jordan">
+<link rel="canonical" href="/blog/posts/20240102-feature-engineering/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.d6fcd20a4fb86efa4dfac8ec95da60244cc8871042183da1ef28e3a762ad79c8.css" integrity="sha256-1vzSCk&#43;4bvpN&#43;sjsldpgJEzIhxBCGD2h7yjjp2Ktecg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="/blog/posts/20240102-feature-engineering/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="/blog/posts/20240102-feature-engineering/">
+  <meta property="og:site_name" content="Analytics &amp; Modeling Blog">
+  <meta property="og:title" content="[GenAI Placeholder] Feature Engineering">
+  <meta property="og:description" content="Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-02T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-02T00:00:00+00:00">
+    <meta property="article:tag" content="Feature Engineering">
+    <meta property="article:tag" content="Machine Learning">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Data Science">
+    <meta property="article:tag" content="D3.js">
+    <meta property="article:tag" content="GenAI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[GenAI Placeholder] Feature Engineering">
+<meta name="twitter:description" content="Note: this post was created by GenAI (Claude) as is temporary filler content.
+The Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "/blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "[GenAI Placeholder] Feature Engineering",
+      "item": "/blog/posts/20240102-feature-engineering/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "[GenAI Placeholder] Feature Engineering",
+  "name": "[GenAI Placeholder] Feature Engineering",
+  "description": "Note: this post was created by GenAI (Claude) as is temporary filler content.\nThe Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.",
+  "keywords": [
+    "feature engineering", "machine learning", "Python", "data science", "D3.js", "GenAI", "Placeholder"
+  ],
+  "articleBody": "Note: this post was created by GenAI (Claude) as is temporary filler content.\nThe Project That Changed Everything Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.\nBeyond Raw Data Let’s look at real-world data and the process of transforming it into something more meaningful for our models. We’ll start with an example dataset containing customer usage patterns.\nimport pandas as pd import numpy as np from sklearn.preprocessing import StandardScaler import json # Load sample data customer_data = pd.DataFrame({ 'customer_id': range(1000), 'signup_date': pd.date_range(start='2024-01-01', periods=1000, freq='D'), 'last_login': pd.date_range(start='2025-01-01', periods=1000, freq='6H'), 'total_logins': np.random.poisson(lam=100, size=1000), 'features_used': [list(np.random.choice(range(50), size=np.random.randint(5, 20))) for _ in range(1000)], 'team_size': np.random.lognormal(3, 1, 1000).astype(int), 'industry': np.random.choice(['Tech', 'Healthcare', 'Finance', 'Retail', 'Manufacturing'], 1000), 'monthly_spending': np.random.lognormal(7, 1, 1000) }) Interactive Feature Distribution Visualization Below is an interactive visualization showing the distribution of various engineered features. You can select different features to see how they vary across different customer segments.\nFeature Engineering Pipeline Here’s our comprehensive feature engineering pipeline:\nclass FeatureEngineer: def __init__(self): self.scaler = StandardScaler() self.feature_stats = {} def create_time_based_features(self, df): \"\"\"Create features based on temporal patterns\"\"\" # Convert dates to datetime if they aren't already df['signup_date'] = pd.to_datetime(df['signup_date']) df['last_login'] = pd.to_datetime(df['last_login']) # Account age df['account_age_days'] = ( df['last_login'] - df['signup_date'] ).dt.total_seconds() / (24 * 3600) # Login frequency (logins per day) df['login_frequency'] = df['total_logins'] / df['account_age_days'] # Days since last login now = pd.Timestamp.now() df['days_since_last_login'] = ( now - df['last_login'] ).dt.total_seconds() / (24 * 3600) return df def create_usage_features(self, df): \"\"\"Create features based on product usage patterns\"\"\" # Feature usage breadth df['feature_breadth'] = df['features_used'].apply(len) # Feature usage depth (assuming higher feature IDs are more advanced) df['advanced_features'] = df['features_used'].apply( lambda x: sum(1 for f in x if f \u003e= 25) ) # Feature usage consistency all_features = set(range(50)) df['feature_coverage'] = df['features_used'].apply( lambda x: len(set(x)) / len(all_features) ) return df def create_team_features(self, df): \"\"\"Create features based on team and organizational characteristics\"\"\" # Per-user spending df['spending_per_user'] = df['monthly_spending'] / df['team_size'] # Team size buckets df['team_size_bucket'] = pd.qcut( df['team_size'], q=5, labels=['Very Small', 'Small', 'Medium', 'Large', 'Very Large'] ) return df def create_interaction_features(self, df): \"\"\"Create interaction features between different metrics\"\"\" # Usage intensity (login frequency * feature breadth) df['usage_intensity'] = df['login_frequency'] * df['feature_breadth'] # Value density (spending per feature used) df['value_density'] = ( df['monthly_spending'] / df['feature_breadth'] ) # Team engagement (logins per team member) df['team_engagement'] = df['total_logins'] / df['team_size'] return df def handle_outliers(self, df, columns, method='clip'): \"\"\"Handle outliers in specified columns\"\"\" for col in columns: if method == 'clip': lower = df[col].quantile(0.01) upper = df[col].quantile(0.99) df[col] = df[col].clip(lower, upper) elif method == 'log': df[col] = np.log1p(df[col]) return df def create_industry_features(self, df): \"\"\"Create industry-specific features\"\"\" # Industry average comparisons industry_avgs = df.groupby('industry')['monthly_spending'].mean() df['spending_vs_industry'] = df.apply( lambda x: x['monthly_spending'] / industry_avgs[x['industry']], axis=1 ) # Industry-specific feature usage patterns industry_feature_usage = df.groupby('industry')['feature_breadth'].mean() df['feature_usage_vs_industry'] = df.apply( lambda x: x['feature_breadth'] / industry_feature_usage[x['industry']], axis=1 ) return df def fit_transform(self, df): \"\"\"Apply all feature engineering steps\"\"\" # Create copies to avoid modifying original transformed_df = df.copy() # Apply all transformations transformed_df = self.create_time_based_features(transformed_df) transformed_df = self.create_usage_features(transformed_df) transformed_df = self.create_team_features(transformed_df) transformed_df = self.create_interaction_features(transformed_df) transformed_df = self.create_industry_features(transformed_df) # Handle outliers numeric_cols = transformed_df.select_dtypes( include=['float64', 'int64'] ).columns transformed_df = self.handle_outliers( transformed_df, numeric_cols, method='clip' ) return transformed_df # Example usage engineer = FeatureEngineer() engineered_data = engineer.fit_transform(customer_data) # Save feature statistics for visualization feature_stats = { col: { 'mean': float(engineered_data[col].mean()), 'std': float(engineered_data[col].std()), 'min': float(engineered_data[col].min()), 'max': float(engineered_data[col].max()), 'q25': float(engineered_data[col].quantile(0.25)), 'q75': float(engineered_data[col].quantile(0.75)) } for col in engineered_data.select_dtypes(include=['float64', 'int64']).columns } # Save to JSON for visualization with open('static/data/feature_stats.json', 'w') as f: json.dump(feature_stats, f) Key Insights from Feature Engineering Our engineered features revealed several interesting patterns:\nTime-Based Patterns\nUsage intensity peaks 2-3 months after signup Weekend usage strongly correlates with upgrade probability Active users show consistent daily patterns Team Dynamics\nTeams with 15-20 members show highest feature adoption Higher per-user spending correlates with faster feature exploration Cross-team collaboration features are strong upgrade indicators Industry-Specific Insights\nTech companies explore features 2x faster than other industries Healthcare shows highest stability in feature usage Financial sector has highest advanced feature adoption Impact on Model Performance After implementing these engineered features:\nAUC improved from 0.67 to 0.89 False positive rate decreased by 45% Lead time for upgrade prediction increased by 2 weeks The Art of Feature Engineering While there are common patterns and techniques, effective feature engineering requires:\nDeep domain knowledge Understanding of data relationships Creative thinking about indirect indicators Rigorous validation of feature importance Future Directions We’re currently exploring:\nAutomated feature generation using deep learning Real-time feature engineering for streaming data Transfer learning for feature importance across industries Code Availability The complete implementation, including visualization code and example datasets, is available in our GitHub repository.\nReferences Dong, Y., \u0026 Li, D. (2024). “Automated Feature Engineering in Production Systems” Anderson, M. et al. (2023). “Domain-Driven Feature Engineering for B2B Applications” Kaggle Feature Engineering Guide (2024) This post was written by [Your Name], a data scientist passionate about turning raw data into meaningful insights.\n",
+  "wordCount" : "849",
+  "inLanguage": "en",
+  "datePublished": "2024-01-02T00:00:00Z",
+  "dateModified": "2024-01-02T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Trevor Jordan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/blog/posts/20240102-feature-engineering/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Analytics \u0026 Modeling Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="/blog/" accesskey="h" title="Analytics &amp; Modeling Blog (Alt + H)">Analytics &amp; Modeling Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/blog/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tsj7ww.github.io/personal" title="Portfolio">
+                    <span>Portfolio</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="/blog/">Home</a>&nbsp;»&nbsp;<a href="/blog/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      [GenAI Placeholder] Feature Engineering
+    </h1>
+    <div class="post-meta"><span title='2024-01-02 00:00:00 +0000 UTC'>January 2, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Trevor Jordan
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#the-project-that-changed-everything" aria-label="The Project That Changed Everything">The Project That Changed Everything</a></li>
+                <li>
+                    <a href="#beyond-raw-data" aria-label="Beyond Raw Data">Beyond Raw Data</a></li>
+                <li>
+                    <a href="#interactive-feature-distribution-visualization" aria-label="Interactive Feature Distribution Visualization">Interactive Feature Distribution Visualization</a></li>
+                <li>
+                    <a href="#feature-engineering-pipeline" aria-label="Feature Engineering Pipeline">Feature Engineering Pipeline</a></li>
+                <li>
+                    <a href="#key-insights-from-feature-engineering" aria-label="Key Insights from Feature Engineering">Key Insights from Feature Engineering</a></li>
+                <li>
+                    <a href="#impact-on-model-performance" aria-label="Impact on Model Performance">Impact on Model Performance</a></li>
+                <li>
+                    <a href="#the-art-of-feature-engineering" aria-label="The Art of Feature Engineering">The Art of Feature Engineering</a></li>
+                <li>
+                    <a href="#future-directions" aria-label="Future Directions">Future Directions</a></li>
+                <li>
+                    <a href="#code-availability" aria-label="Code Availability">Code Availability</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Note: this post was created by GenAI (Claude) as is temporary filler content.</p>
+<h2 id="the-project-that-changed-everything">The Project That Changed Everything<a hidden class="anchor" aria-hidden="true" href="#the-project-that-changed-everything">#</a></h2>
+<p>Last quarter, our team faced a challenging problem: predict which B2B customers would upgrade their subscription plan within the next 3 months. Our initial model performed poorly, with an AUC of just 0.67. The breakthrough came not from trying different algorithms, but from something more fundamental - how we engineered our features.</p>
+<h2 id="beyond-raw-data">Beyond Raw Data<a hidden class="anchor" aria-hidden="true" href="#beyond-raw-data">#</a></h2>
+<p>Let&rsquo;s look at real-world data and the process of transforming it into something more meaningful for our models. We&rsquo;ll start with an example dataset containing customer usage patterns.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Load sample data</span>
+</span></span><span class="line"><span class="cl"><span class="n">customer_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;customer_id&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;signup_date&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;last_login&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;6H&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;total_logins&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lam</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;features_used&#39;</span><span class="p">:</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">                     <span class="n">size</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">)))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;team_size&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;industry&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Tech&#39;</span><span class="p">,</span> <span class="s1">&#39;Healthcare&#39;</span><span class="p">,</span> <span class="s1">&#39;Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Retail&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                                <span class="s1">&#39;Manufacturing&#39;</span><span class="p">],</span> <span class="mi">1000</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;monthly_spending&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><h2 id="interactive-feature-distribution-visualization">Interactive Feature Distribution Visualization<a hidden class="anchor" aria-hidden="true" href="#interactive-feature-distribution-visualization">#</a></h2>
+<p>Below is an interactive visualization showing the distribution of various engineered features. You can select different features to see how they vary across different customer segments.</p>
+<div id="feature-viz"></div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/blog/js/features.js"></script>
+<style>
+#feature-viz {
+    width: 100%;
+    min-height: 500px;
+    margin: 20px 0;
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+}
+#feature-viz svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+</style>
+<h2 id="feature-engineering-pipeline">Feature Engineering Pipeline<a hidden class="anchor" aria-hidden="true" href="#feature-engineering-pipeline">#</a></h2>
+<p>Here&rsquo;s our comprehensive feature engineering pipeline:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FeatureEngineer</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">feature_stats</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">create_time_based_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Create features based on temporal patterns&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Convert dates to datetime if they aren&#39;t already</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;signup_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;signup_date&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;last_login&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;last_login&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Account age</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;account_age_days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;last_login&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;signup_date&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Login frequency (logins per day)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;login_frequency&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;total_logins&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;account_age_days&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Days since last login</span>
+</span></span><span class="line"><span class="cl">        <span class="n">now</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;days_since_last_login&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">now</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;last_login&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">df</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">create_usage_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Create features based on product usage patterns&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Feature usage breadth</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;feature_breadth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;features_used&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Feature usage depth (assuming higher feature IDs are more advanced)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;advanced_features&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;features_used&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">x</span> <span class="k">if</span> <span class="n">f</span> <span class="o">&gt;=</span> <span class="mi">25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Feature usage consistency</span>
+</span></span><span class="line"><span class="cl">        <span class="n">all_features</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;feature_coverage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;features_used&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_features</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">df</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">create_team_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Create features based on team and organizational characteristics&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Per-user spending</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;spending_per_user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;monthly_spending&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;team_size&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Team size buckets</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;team_size_bucket&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;team_size&#39;</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">q</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Very Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Large&#39;</span><span class="p">,</span> <span class="s1">&#39;Very Large&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">df</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">create_interaction_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Create interaction features between different metrics&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Usage intensity (login frequency * feature breadth)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;usage_intensity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;login_frequency&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;feature_breadth&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Value density (spending per feature used)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;value_density&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">df</span><span class="p">[</span><span class="s1">&#39;monthly_spending&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;feature_breadth&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Team engagement (logins per team member)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;team_engagement&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;total_logins&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;team_size&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">df</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">handle_outliers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;clip&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Handle outliers in specified columns&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;clip&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">lower</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">upper</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;log&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">df</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">create_industry_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Create industry-specific features&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Industry average comparisons</span>
+</span></span><span class="line"><span class="cl">        <span class="n">industry_avgs</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;industry&#39;</span><span class="p">)[</span><span class="s1">&#39;monthly_spending&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;spending_vs_industry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;monthly_spending&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">industry_avgs</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;industry&#39;</span><span class="p">]],</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Industry-specific feature usage patterns</span>
+</span></span><span class="line"><span class="cl">        <span class="n">industry_feature_usage</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;industry&#39;</span><span class="p">)[</span><span class="s1">&#39;feature_breadth&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;feature_usage_vs_industry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;feature_breadth&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">industry_feature_usage</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;industry&#39;</span><span class="p">]],</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">df</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">fit_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Apply all feature engineering steps&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Create copies to avoid modifying original</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformed_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Apply all transformations</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformed_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_time_based_features</span><span class="p">(</span><span class="n">transformed_df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformed_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_usage_features</span><span class="p">(</span><span class="n">transformed_df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformed_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_team_features</span><span class="p">(</span><span class="n">transformed_df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformed_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_interaction_features</span><span class="p">(</span><span class="n">transformed_df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformed_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_industry_features</span><span class="p">(</span><span class="n">transformed_df</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Handle outliers</span>
+</span></span><span class="line"><span class="cl">        <span class="n">numeric_cols</span> <span class="o">=</span> <span class="n">transformed_df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+</span></span><span class="line"><span class="cl">        <span class="n">transformed_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_outliers</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">transformed_df</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">numeric_cols</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">method</span><span class="o">=</span><span class="s1">&#39;clip&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">transformed_df</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Example usage</span>
+</span></span><span class="line"><span class="cl"><span class="n">engineer</span> <span class="o">=</span> <span class="n">FeatureEngineer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">engineered_data</span> <span class="o">=</span> <span class="n">engineer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">customer_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Save feature statistics for visualization</span>
+</span></span><span class="line"><span class="cl"><span class="n">feature_stats</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">col</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;mean&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">engineered_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()),</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;std&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">engineered_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()),</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">engineered_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">engineered_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;q25&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">engineered_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;q75&#39;</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">engineered_data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">engineered_data</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;float64&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">columns</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Save to JSON for visualization</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;static/data/feature_stats.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">feature_stats</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="key-insights-from-feature-engineering">Key Insights from Feature Engineering<a hidden class="anchor" aria-hidden="true" href="#key-insights-from-feature-engineering">#</a></h2>
+<p>Our engineered features revealed several interesting patterns:</p>
+<ol>
+<li>
+<p><strong>Time-Based Patterns</strong></p>
+<ul>
+<li>Usage intensity peaks 2-3 months after signup</li>
+<li>Weekend usage strongly correlates with upgrade probability</li>
+<li>Active users show consistent daily patterns</li>
+</ul>
+</li>
+<li>
+<p><strong>Team Dynamics</strong></p>
+<ul>
+<li>Teams with 15-20 members show highest feature adoption</li>
+<li>Higher per-user spending correlates with faster feature exploration</li>
+<li>Cross-team collaboration features are strong upgrade indicators</li>
+</ul>
+</li>
+<li>
+<p><strong>Industry-Specific Insights</strong></p>
+<ul>
+<li>Tech companies explore features 2x faster than other industries</li>
+<li>Healthcare shows highest stability in feature usage</li>
+<li>Financial sector has highest advanced feature adoption</li>
+</ul>
+</li>
+</ol>
+<h2 id="impact-on-model-performance">Impact on Model Performance<a hidden class="anchor" aria-hidden="true" href="#impact-on-model-performance">#</a></h2>
+<p>After implementing these engineered features:</p>
+<ul>
+<li>AUC improved from 0.67 to 0.89</li>
+<li>False positive rate decreased by 45%</li>
+<li>Lead time for upgrade prediction increased by 2 weeks</li>
+</ul>
+<h2 id="the-art-of-feature-engineering">The Art of Feature Engineering<a hidden class="anchor" aria-hidden="true" href="#the-art-of-feature-engineering">#</a></h2>
+<p>While there are common patterns and techniques, effective feature engineering requires:</p>
+<ol>
+<li>Deep domain knowledge</li>
+<li>Understanding of data relationships</li>
+<li>Creative thinking about indirect indicators</li>
+<li>Rigorous validation of feature importance</li>
+</ol>
+<h2 id="future-directions">Future Directions<a hidden class="anchor" aria-hidden="true" href="#future-directions">#</a></h2>
+<p>We&rsquo;re currently exploring:</p>
+<ol>
+<li>Automated feature generation using deep learning</li>
+<li>Real-time feature engineering for streaming data</li>
+<li>Transfer learning for feature importance across industries</li>
+</ol>
+<h2 id="code-availability">Code Availability<a hidden class="anchor" aria-hidden="true" href="#code-availability">#</a></h2>
+<p>The complete implementation, including visualization code and example datasets, is available in our <a href="https://github.com/yourusername/feature-engineering">GitHub repository</a>.</p>
+<h2 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h2>
+<ol>
+<li>Dong, Y., &amp; Li, D. (2024). &ldquo;Automated Feature Engineering in Production Systems&rdquo;</li>
+<li>Anderson, M. et al. (2023). &ldquo;Domain-Driven Feature Engineering for B2B Applications&rdquo;</li>
+<li>Kaggle Feature Engineering Guide (2024)</li>
+</ol>
+<hr>
+<p><em>This post was written by [Your Name], a data scientist passionate about turning raw data into meaningful insights.</em></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="/blog/tags/feature-engineering/">Feature Engineering</a></li>
+      <li><a href="/blog/tags/machine-learning/">Machine Learning</a></li>
+      <li><a href="/blog/tags/python/">Python</a></li>
+      <li><a href="/blog/tags/data-science/">Data Science</a></li>
+      <li><a href="/blog/tags/d3.js/">D3.js</a></li>
+      <li><a href="/blog/tags/genai/">GenAI</a></li>
+      <li><a href="/blog/tags/placeholder/">Placeholder</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="/blog/posts/20240103-anomaly-detection/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>[GenAI Placeholder] Anomaly Detection</span>
+  </a>
+  <a class="next" href="/blog/posts/20240101-customer-churn/">
+    <span class="title">Next »</span>
+    <br>
+    <span>[GenAI Placeholder] Customer Churn / Survival Analysis</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>© 2025 Trevor Jordan</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -3,64 +3,82 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/blog/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/anomaly-detection/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/categories/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/d3.js/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/devops/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/categories/infrastructure/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/machine-learning/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/categories/machine-learning/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/posts/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/tags/python/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
+    <loc>/blog/posts/upcoming/</loc>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/posts/20250111-anomaly-detection/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/</loc>
-    <lastmod>2025-01-11T00:00:00+00:00</lastmod>
+    <loc>/blog/categories/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/tags/data-science/</loc>
-    <lastmod>2024-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/python/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/categories/software/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/posts/package-development/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/software-development/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/</loc>
+    <lastmod>2025-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/posts/20240103-anomaly-detection/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/anomaly-detection/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/d3.js/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/devops/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/genai/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/categories/infrastructure/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/machine-learning/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/categories/machine-learning/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/placeholder/</loc>
+    <lastmod>2024-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/posts/20240102-feature-engineering/</loc>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/categories/data-science/</loc>
-    <lastmod>2024-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/tags/feature-engineering/</loc>
-    <lastmod>2024-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/posts/20240715-feature-engineering/</loc>
-    <lastmod>2024-07-15T00:00:00+00:00</lastmod>
+    <loc>/blog/posts/20240101-customer-churn/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/categories/business-analytics/</loc>
-    <lastmod>2024-03-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/tags/customer-retention/</loc>
-    <lastmod>2024-03-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/tags/survival-analysis/</loc>
-    <lastmod>2024-03-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/posts/20240321-customer-churn/</loc>
-    <lastmod>2024-03-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/archives/</loc>
   </url><url>
