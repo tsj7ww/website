@@ -10,12 +10,11 @@
     <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/blog/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Software (Python Package) Development</title>
+      <title>Software Development: Python Packages</title>
       <link>/blog/posts/package-development/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <guid>/blog/posts/package-development/</guid>
-      <description>This will be a post discussing python package development.
-Architecture Environment &amp;amp; Tools Testing Standards CI / CD Distribution &amp;amp; Releases Optimization Security &amp;amp; Errors Community &amp;amp; Maintenance </description>
+      <description>Architecture Complete Package Structure your_package/ ├── .github/ # GitHub-specific configurations │ ├── ISSUE_TEMPLATE/ # Issue templates │ │ ├── bug_report.md # Bug report template │ │ └── feature_request.md # Feature request template │ └── workflows/ # GitHub Actions workflows │ ├── tests.yml # Testing workflow │ ├── publish.yml # Publishing workflow │ └── docs.yml # Documentation workflow │ ├── docs/ # Documentation │ ├── _static/ # Static files for documentation │ ├── _templates/ # Documentation templates │ ├── api/ # API documentation │ ├── examples/ # Example galleries │ ├── tutorials/ # Tutorial documents │ ├── conf.</description>
     </item>
   </channel>
 </rss>
