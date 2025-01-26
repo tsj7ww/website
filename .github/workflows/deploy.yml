@@ -21,19 +21,10 @@ jobs:
           repository: tsj7ww/tsj7ww.github.io
           token: ${{ secrets.PAT_TOKEN }}
           path: dest-repo
-
-      - name: Clean destination repository
-        run: |
-          cd dest-repo
-          # Save .github directory
-          mv .github ../temp-github || true
-          # Remove all files except .git
-          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
-          # Restore .github directory
-          mv ../temp-github .github || true
-
+      
       - name: Copy static files
         run: |
+          find ./dest-repo -mindepth 1 ! -path './dest-repo/.git*' ! -path './dest-repo/.github*' -exec rm -rf {} +
           cp -r static/* dest-repo/
           
       - name: Commit and push changes

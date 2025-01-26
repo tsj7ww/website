@@ -32,7 +32,7 @@ const events = {
     '2025-06-08': { text: "French Open", color: event_color_social_gathering },
     '2025-06-14': { text: "NBA Finals", color: event_color_social_gathering },
     '2025-07-04': { text: "Independence Day", color: event_color_social_gathering },
-    '2025-07-11': { text: "Bday<br><br>", color: event_color_bday },
+    '2025-07-11': { text: "30th Bday<br>", color: event_color_bday },
     '2025-07-13': { text: "Wimbledon", color: event_color_social_gathering },
     '2025-09-01': { text: "Labor Day", color: event_color_social_gathering },
     '2025-09-07': { text: "US Open", color: event_color_social_gathering },
